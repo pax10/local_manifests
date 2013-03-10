@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+ <!-- repos -->
+  <remote  name="gh"
+           fetch="https://github.com/" />
+
+  <remote name="linaro"
+          fetch="http://android.git.linaro.org/git-ro/"
+          review="review.android.git.linaro.org" />
+  <remote fetch="git://git.linaro.org/"
+          name="linaro-other" />
+
+ <!-- replaced repos -->
+  <remove-project name="platform/build" />
+  <remove-project name="platform/development" />
+  <remove-project name="platform/external/dnsmasq" />
+  <remove-project name="platform/external/e2fsprogs" />
+  <remove-project name="platform/external/elfutils" />
+  <remove-project name="platform/external/embunit" />
+  <remove-project name="platform/external/ffmpeg" />
+  <remove-project name="platform/external/freetype" />
+  <remove-project name="platform/external/guava" />
+  <remove-project name="platform/external/libnl" />
+  <remove-project name="platform/external/linux-tools-perf" />
+  <remove-project name="platform/external/lrzsz" />
+  <remove-project name="platform/external/openssh" />
+  <remove-project name="platform/external/openssl" />
+  <remove-project name="platform/external/oprofile" />
+  <remove-project name="platform/external/ping" />
+  <remove-project name="platform/external/ping6" />
+  <remove-project name="platform/external/quake" />
+  <remove-project name="platform/external/sonivox" />
+  <remove-project name="platform/external/speex" />
+  <remove-project name="platform/external/stlport" />
+  <remove-project name="platform/external/tcpdump" />
+  <remove-project name="platform/external/v8" />
+  <remove-project name="platform/external/webkit" />
+  <remove-project name="platform/external/wpa_supplicant_8" />
+  <remove-project name="platform/external/x264" />
+  <remove-project name="platform/frameworks/compile/libbcc" />
+  <remove-project name="platform/frameworks/compile/mclinker" />
+  <remove-project name="platform/frameworks/compile/slang" />
+  <remove-project name="platform/frameworks/ex" />
+  <remove-project name="platform/frameworks/rs" />
+  <remove-project name="platform/frameworks/support" />
+  <remove-project name="platform/frameworks/wilhelm" />
+  <remove-project name="platform/hardware/samsung/origen/gralloc_ump" />
+  <remove-project name="platform/hardware/samsung/origen/ump" />
+  <remove-project name="platform/packages/apps/LegacyCamera" />
+  <remove-project name="platform/system/security" />
+
+ <!-- add repos -->
+
+  <project path="build" name="MikereDD/platform_build" remote="gh" revision="jb">
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+
+  <project name="platform/development" path="development" revision="linaro_android_4.2.2" />
+ <!-- external -->
+  <project path="external/dnsmasq" name="platform/external/dnsmasq" revision="linaro_android_4.2.2" />
+  <project path="external/e2fsprogs" name="platform/external/e2fsprogs" revision="linaro_android_4.2.2" />
+  <project path="external/elfutils" name="platform/external/elfutils" revision="linaro_android_4.2.2" />
+  <project path="external/embunit" name="platform/external/embunit" revision="linaro_android_4.2.2" />
+  <project path="external/ffmpeg" name="platform/external/ffmpeg" revision="linaro-1.0.1" />
+  <project path="external/freetype" name="platform/external/freetype" revision="linaro_android_4.2.2" />
+  <project path="external/guava" name="platform/external/guava" revision="linaro_android_4.2.2" />
+  <project path="external/libnl" name="platform/external/libnl" revision="linaro" />
+  <project path="external/linux-tools-perf" name="platform/external/linux-tools-perf" revision="linaro_android_4.2.2" />
+  <project path="external/lrzsz" name="platform/external/lrzsz" revision="linaro-master" />
+  <project path="external/openssh" name="platform/external/openssh" revision="linaro_android_4.2.2" />
+  <project path="external/openssl" name="platform/external/openssl" revision="linaro_android_4.2.2" />
+  <project path="external/oprofile" name="platform/external/oprofile" revision="linaro_android_4.2.2" />
+  <project path="external/ping" name="platform/external/ping" revision="linaro_android_4.2.2" />
+  <project path="external/ping6" name="platform/external/ping6" revision="linaro_android_4.2.2" />
+  <project path="external/quake" name="platform/external/quake" revision="linaro_android_4.2.2" />
+  <project path="external/sonivox" name="platform/external/sonivox" revision="linaro_android_4.2.2" />
+  <project path="external/speex" name="platform/external/speex" revision="linaro_mmwg" />
+  <project path="external/stlport" name="platform/external/stlport" revision="linaro_android_4.2.2" />
+  <project path="external/tcpdump" name="platform/external/tcpdump" revision="linaro_android_4.2.2" />
+  <project path="external/v8" name="platform/external/v8" remote="linaro"  revision="linaro_android_4.2.2" />
+  <project path="external/webkit" name="platform/external/webkit" remote="linaro"  revision="linaro_android_4.2.2" />
+  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" revision="linaro_android_4.2.2" />
+  <project path="external/x264" name="platform/external/x264" revision="linaro-master" />
+ <!-- framework -->
+  <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" revision="linaro_android_4.2.2" />
+  <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" revision="linaro_android_4.2.2" />
+  <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" revision="linaro_android_4.2.2" />
+  <project path="frameworks/ex" name="platform/frameworks/ex" revision="linaro_android_4.2.2" />
+  <project path="frameworks/rs" name="platform/frameworks/rs" revision="linaro_android_4.2.2" />
+  <project path="frameworks/support" name="platform/frameworks/support" revision="linaro_android_4.2.2" />
+  <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" revision="linaro_android_4.2.2" />
+ <!-- hardware -->
+  <project path="hardware/samsung/origen/gralloc_ump" name="platform/hardware/samsung/origen/gralloc_ump" revision="linaro_android_jb" />
+  <project path="hardware/samsung/origen/ump" name="platform/hardware/samsung/origen/ump" revision="linaro_android_jb" />
+ <!-- packages -->
+
+ <!-- system -->
+  <project path="system/security" name="platform/system/security" revision="linaro_android_4.2.2" />
+
+ <!-- vendor -->
+  <project path="vendor/asus" name="pax10/vendor_asus" remote="gh" revision="master" />
+  <project path="vendor/broadcom" name="pax10/vendor_broadcom" remote="gh" revision="master" />
+  <project path="vendor/csr" name="pax10/vendor_csr" remote="gh" revision="master" />
+  <project path="vendor/elan" name="pax10/vendor_elan" remote="gh" revision="master" />
+  <project path="vendor/imgtec" name="pax10/vendor_imgtec" remote="gh" revision="master" />
+  <project path="vendor/invensense" name="pax10/vendor_invensense" remote="gh" revision="master" />
+  <project path="vendor/nvidia" name="pax10/vendor_nvidia" remote="gh" revision="master" />
+  <project path="vendor/nxp" name="pax10/vendor_nxp" remote="gh" revision="master" />
+  <project path="vendor/widevine" name="pax10/vendor_widevine" remote="gh" revision="master" />
+  <project path="vendor/samsung" name="MikereDD/vendor_samsung" remote="gh" revision="stock" />
+
+</manifest>
