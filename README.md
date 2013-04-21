@@ -1,10 +1,9 @@
 removes/replace and add's I like.
 
-local_manifest I use each branch is for a different rom.
-master > template,
-stock > stock(ish) aosp ei: raumzero,
-raum-mr1 > moded aokp renamed as raum00,
-rb > moded rootbox
+local_manifest I've tossed together.
+
+master > local_manifest.xml template
+alm > all the manifest I've put together while playing with various rom source.
 
 Branch: Master
 template base
