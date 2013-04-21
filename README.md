@@ -15,7 +15,7 @@ Myself I create a hidden local_manifests directory then alias the xml file I wan
     
     $ mkdir -p ~/android/.repo/local_manifests
     
-    $ ln -s /home/$(whoami)/android/.local_manifests/local_manifest_rz.xml /home/$(whoami)/android/.repo/local_manifests/local_manifest.xml
+    $ ln -s /home/`whoami`/android/.local_manifests/local_manifest_rz.xml /home/`whoami`/android/.repo/local_manifests/local_manifest.xml
 
 Then I just run repo sync and wait.
 
