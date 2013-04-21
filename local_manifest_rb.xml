@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <!-- rootbox manifest -->
+
+ <!-- repos used -->
+
+  <remote name="linaro"
+          fetch="http://android.git.linaro.org/git-ro/"
+          review="review.android.git.linaro.org" />
+  <remote fetch="git://git.linaro.org/"
+          name="linaro-other" />
+  <remote name="eos"
+          fetch="git://git.teameos.org/" />
+
+
+ <!-- replaced repos -->
+  <remove-project name="android_build" />
+  <remove-project name="buildscripts" />
+  <remove-project name="android_bionic" />
+  <remove-project name="platform/development" />
+  <remove-project name="platform/external/chromium" />
+  <remove-project name="platform/external/clang" />
+  <!-- <remove-project name="platform/external/e2fsprogs" /> -->
+  <remove-project name="platform/external/embunit" />
+  <remove-project name="platform/external/freetype" />
+  <remove-project name="platform/external/guava" />
+  <remove-project name="platform/external/linux-tools-perf" />
+  <remove-project name="platform/external/llvm" />
+  <remove-project name="platform/frameworks/compile/llvm-ndk-cc" />
+  <remove-project name="platform/external/mesa3d" />
+  <remove-project name="android_external_openssh" />
+  <remove-project name="platform/external/openssl" />
+  <remove-project name="platform/external/ping" />
+  <remove-project name="platform/external/ping6" />
+  <remove-project name="platform/external/quake" />
+  <remove-project name="platform/external/sonivox" />
+  <remove-project name="platform/external/speex" />
+  <remove-project name="platform/external/stlport" />
+  <remove-project name="platform/external/tcpdump" />
+  <remove-project name="platform/external/v8" />
+  <remove-project name="device_samsung_tuna" />
+  <remove-project name="frameworks_base" />
+  <!-- <remove-project name="platform/frameworks/ex" /> -->
+  <remove-project name="platform/frameworks/compile/libbcc" />
+  <remove-project name="platform/frameworks/compile/mclinker" />
+  <remove-project name="platform/frameworks/compile/slang" />
+  <remove-project name="platform/frameworks/support" />
+  <!-- <remove-project name="platform/frameworks/testing" /> -->
+  <remove-project name="platform/frameworks/wilhelm" />
+  <!-- <remove-project name="packages_apps_Browser" /> -->
+  <remove-project name="platform/packages/apps/LegacyCamera" />
+  <remove-project name="packages_apps_Camera" />
+  <remove-project name="packages_apps_Gallery2" />
+  <remove-project name="packages_apps_Mms" />
+  <remove-project name="packages_apps_Phone" />
+  <remove-project name="packages_apps_ROMControl" />
+  <remove-project name="packages_apps_Settings" />
+  <remove-project name="android_system_core" />
+  <remove-project name="platform/system/security" />
+  <remove-project name="android_system_extras" />
+  <remove-project name="vendor_rootbox" />
+  <remove-project name="vendor_samsung" />
+  <remove-project name="kernel/omap" />
+  <remove-project name="kernel/tegra" />
+
+  <project path="build" name="pax10/platform_build" remote="gh" revision="rb" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+   </project>
+
+  <project path="rootbox" name="pax10/buildscripts" remote="gh" revision="bs" >
+    <copyfile src="build_all.sh" dest="build_all.sh" />
+    <copyfile src="build_rootbox.sh" dest="build_rootbox.sh" />
+  </project>
+
+ <!-- bionic -->
+  <project path="bionic" name="kejar31/android_bionic" remote="gh" revision="cm-10.1-linaro" />
+ <!-- devel -->
+  <project name="platform/development" path="development" remote="linaro" revision="linaro_android_4.2.2" />
+
+ <!-- device -->
+  <project path="device/samsung/tuna" name="MikereDD/platform_device_samsung_tuna" remote="gh" revision="rb" />
+  <project path="device/samsung/toro" name="MikereDD/platform_device_samsung_toro" remote="gh" revision="rb" />
+
+ <!-- external -->
+  <project path="external/bash" name="CyanogenMod/android_external_bash" remote="gh" revision="cm-10.1" />
+  <project path="external/busybox" name="CyanogenMod/android_external_busybox" remote="gh" revision="cm-10.1" />
+  <project path="external/chromium" name="UnicornButter/external_chromium" remote="gh" revision="jb-mr1" />
+  <project path="external/clang" name="loosethisskin/android_external_clang" remote="gh" revision="cm-10.1-linaro" />
+  <project path="external/e2fsprogs" name="loosethisskin/android_external_e2fsprogs" remote="gh" revision="cm-10.1-linaro" />
+  <project path="external/elfutils" name="loosethisskin/android_external_elfutils" remote="gh" revision="cm-10.1-linaro" />
+  <project path="external/embunit" name="loosethisskin/android_external_embunit" remote="gh" revision="cm-10.1-linaro" />
+  <!-- <project path="external/e2fsprogs" name="platform/external/e2fsprogs" remote="linaro" revision="linaro_android_4.2.2" />
+  <project path="external/e2fsprogs" name="platform/external/e2fsprogs" remote="linaro" revision="linaro_android_4.2.2" />
+  <project path="external/embunit" name="platform/external/embunit" remote="linaro" revision="linaro_android_4.2.2" /> -->
+  <project path="external/ffmpeg" name="platform/external/ffmpeg" remote="linaro" revision="linaro-1.0.1" />
+  <project path="external/freetype" name="loosethisskin/android_external_freetype" remote="gh" revision="cm-10.1-linaro" />
+  <!-- <project path="external/freetype" name="platform/external/freetype" remote="linaro" revision="linaro_android_4.2.2" /> -->
+  <project path="external/htop" name="pax10/android_external_htop" remote="gh" revision="cm-10.1" />
+  <project path="external/libncurses" name="CyanogenMod/android_external_libncurses" remote="gh" revision="cm-10.1" />
+  <project path="external/guava" name="platform/external/guava" remote="linaro" revision="linaro_android_4.2.2" />
+  <project path="external/libnl" name="platform/external/libnl" remote="linaro" revision="linaro" />
+  <project path="external/linux-tools-perf" name="loosethisskin/android_external_linux-tools-perf" remote="gh" revision="cm-10.1-linaro" />
+  <project path="external/llvm" name="loosethisskin/android_external_llvm" remote="gh" revision="cm-10.1-linaro" />
+  <!-- <project path="external/linux-tools-perf" name="platform/external/linux-tools-perf" remote="linaro" revision="linaro_android_4.2.2" />
+  <project path="external/llvm" name="loosethisskin/android_external_llvm" remote="gh" revision="cm-10.1-linaro" /> -->
+  <project path="external/lrzsz" name="platform/external/lrzsz" remote="linaro" revision="linaro-master" />
+  <project path="external/lsof" name="CyanogenMod/android_external_lsof" remote="gh" revision="cm-10.1" />
+  <project path="external/mesa3d" name="loosethisskin/android_external_mesa3d" remote="gh" revision="cm-10.1-linaro" />
+  <project path="external/openssh" name="UnicornButter/external_openssh" remote="gh" revision="jb-mr1" />
+  <project path="external/openssl" name="UnicornButter/external_openssl" remote="gh" revision="jb-mr1" />
+  <project path="external/ping" name="UnicornButter/external_ping" remote="gh" revision="jb-mr1" />
+  <!-- <project path="external/openssl" name="platform/external/openssl" remote="linaro" revision="linaro_android_4.2.2" />
+  <project path="external/ping" name="platform/external/ping" remote="linaro" revision="linaro_android_4.2.2" /> -->
+  <project path="external/ping6" name="loosethisskin/android_external_ping6" remote="gh" revision="cm-10.1-linaro" />
+  <!-- <project path="external/ping6" name="platform/external/ping6" remote="linaro" revision="linaro_android_4.2.2" /> -->
+  <project path="external/quake" name="platform/external/quake" remote="linaro" revision="linaro_android_4.2.2" />
+  <project path="external/sonivox" name="platform/external/sonivox" remote="linaro" revision="linaro_android_4.2.2" />
+  <project path="external/speex" name="platform/external/speex" remote="linaro" revision="linaro_mmwg" />
+  <project path="external/stlport" name="UnicornButter/external_stlport" remote="gh" revision="jb-mr1" />
+  <!-- <project path="external/stlport" name="platform/external/stlport" remote="linaro" revision="linaro_android_4.2.2" /> -->
+  <project path="external/tcpdump" name="loosethisskin/android_external_tcpdump" remote="gh" revision="cm-10.1-linaro" />
+  <!-- <project path="external/tcpdump" name="platform/external/tcpdump" remote="linaro" revision="linaro_android_4.2.2" />
+  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" remote="linaro" revision="linaro_android_4.2.2" /-->
+  <project path="external/x264" name="platform/external/x264" remote="linaro" revision="linaro-master" />
+  <project path="external/powertop" name="CyanogenMod/android_external_powertop" remote="gh" revision="cm-10.1" />
+  <project path="external/v8" name="UnicornButter/external_v8" remote="gh" revision="jb-mr1" />
+  <project path="external/vim" name="pax10/android_external_vim" remote="gh" revision="cm-10.1" />
+  <!-- <project name="koush/Superuser" path="external/koush/Superuser" remote="gh" revision="master" />
+  <project name="koush/Widgets" path="external/koush/Widgets" remote="gh" revision="master" /> -->
+
+ <!-- framework -->
+  <project path="frameworks/base" name="pax10/frameworks_base" remote="gh" revision="rb" />
+  <!-- <project path="frameworks/native" name="loosethisskin/android_frameworks_native" remote="gh" revision="cm-10.1-linaro" />
+  <project path="frameworks/rs" name="loosethisskin/android_frameworks_rs" remote="gh" revision="cm-10.1-linaro" />  -->
+  <project path="frameworks/compile/libbcc" name="loosethisskin/android_frameworks_compile_libbcc" remote="gh" revision="cm-10.1-linaro" />
+  <project path="frameworks/compile/slang" name="loosethisskin/android_frameworks_compile_slang" remote="gh" revision="cm-10.1-linaro" /> 
+  <!-- <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" remote="linaro" revision="linaro_android_4.2.2" /> -->
+  <!-- <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" remote="linaro" revision="linaro_android_4.2.2" /> -->
+  <project path="frameworks/compile/mclinker" name="UnicornButter/frameworks_compile_mclinker" remote="gh" revision="jb-mr1" />
+  <project path="frameworks/wilhelm" name="UnicornButter/frameworks_wilhelm" remote="gh" revision="jb-mr1" />
+  <project path="frameworks/support" name="loosethisskin/android_frameworks_support" remote="gh" revision="cm-10.1-linaro" />
+  <!-- <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" remote="linaro" revision="linaro_android_4.2.2" /> -->
+
+ <!-- hardware -->
+
+ <!-- lib -->
+
+ <!-- packages -->
+  <project path="packages/apps/Browser" name="pax10/platform_packages_apps_browser" remote="gh" revision="jb-mr1-dev" />
+  <project path="packages/apps/LegacyCamera" name="platform/packages/apps/LegacyCamera" remote="linaro" revision="linaro_android_4.2.2" />
+  <project path="packages/apps/Camera" name="pax10/android_packages_apps_Camera" remote="gh" revision="rb" />
+  <project path="packages/apps/Gallery2" name="pax10/android_packages_apps_Gallery2" remote="gh" revision="rb" />
+  <project path="packages/apps/Mms" name="pax10/android_packages_apps_Mms" remote="gh" revision="rb" />
+  <project path="packages/apps/Phone" name="pax10/packages_apps_Phone" remote="gh" revision="rb" />
+  <project path="packages/apps/ROMControl" name="pax10/packages_apps_ROMControl" remote="gh" revision="rb" />
+  <project path="packages/apps/Settings" name="pax10/packages_apps_Settings" remote="gh" revision="rb" />
+  <project path="packages/apps/SpeakerProximity" name="VanirAOSP/packages_apps_SpeakerProximity" remote="gh" revision="jb42" />
+
+ <!-- prebuilt -->
+  <project path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7" groups="darwin,arm" revision="master" />
+  <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.7" name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.7" groups="darwin,arm" revision="master" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" groups="linux,arm" revision="master" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" groups="linux,arm" revision="master" />
+
+ <!-- system -->
+  <project path="system/core" name="pax10/android_system_core" remote="gh" revision="rb" />
+  <project path="system/extras" name="loosethisskin/android_system_extras" remote="gh" revision="cm-10.1-linaro" />
+  <project path="system/security" name="platform/system/security" remote="linaro" revision="linaro_android_4.2.2" />
+
+ <!-- vendor -->
+  <project path="vendor/samsung" name="pax10/vendor_samsung" remote="gh" revision="rb" />
+  <project path="vendor/rootbox" name="pax10/vendor_rootbox" remote="gh" revision="jb-mr1" />
+  <project path="vendor/google" name="MikereDD/vendor_google" remote="gh" revision="master" />
+  <!-- <project path="vendor/broadcom" name="TheMuppets/proprietary_vendor_broadcom" remote="gh" revision="cm-10.1" />
+  <project path="vendor/elan" name="TheMuppets/proprietary_vendor_elan" remote="gh" revision="cm-10.1" />
+  <project path="vendor/invensense" name="TheMuppets/proprietary_vendor_invensense" remote="gh" revision="cm-10.1" />
+  <project path="vendor/nxp" name="TheMuppets/proprietary_vendor_nxp" remote="gh" revision="cm-10.1" />
+  <project path="vendor/widevine" name="TheMuppets/proprietary_vendor_widevine" remote="gh" revision="cm-10.1" />
+  <project path="vendor/imgtec" name="TheMuppets/proprietary_vendor_imgtec" remote="gh" revision="cm-10.1" /> -->
+
+ <!-- kernel -->
+  <project path="kernel/asus/grouper" name="kernel/tegra" remote="aosp" revision="android-tegra3-grouper-3.1-jb-mr1.1" />
+  <project path="kernel/samsung/tuna-omap" name="kernel/omap" remote="aosp" revision="android-omap-tuna-3.0-jb-mr1.1" />
+  <project path="kernel/asus/tuna-pax" name="pax10/raum-kernel" remote="gh" revision="tuna-jb-mr1.1" />
+  <project path="kernel/asus/grouper-franco" name="franciscofranco/Grouper-3.1.10" remote="gh" revision="android-tegra3-grouper-3.1-jb-mr1" />
+  <project path="kernel/samsung/tuna-franco" name="franciscofranco/Tuna_JB_pre1" remote="gh" revision="fk_4.2" />
+  <project path="kernel/samsung/tuna" name="tiny4579/tinykernel-gnex" remote="gh" revision="tiny-jb-mr1.1" />
+
+ <!-- Themes -->
+  <project path="vendor/tmobile/apps/ThemeChooser" name="pax10/themes-platform-vendor-tmobile-apps-ThemeChooser" remote="gh" revision="raum-mr1" />
+  <project path="vendor/tmobile/libs/com.tmobile.themes" name="eos/platform/vendor/tmobile/libs/com.tmobile.themes" remote="eos" revision="jellybean-4.2" />
+  <project path="vendor/tmobile/providers/ThemeManager" name="CyanogenMod/android_vendor_tmobile_providers_ThemeManager" remote="gh" revision="cm-10.1" />
+  <project path="vendor/tmobile/products/themes" name="CyanogenMod/android_vendor_tmobile_products_themes" remote="gh" revision="cm-10.1" />
+
+</manifest>

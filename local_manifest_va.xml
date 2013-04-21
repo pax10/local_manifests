@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <!-- vanir and pa-vanir -->
+    <!-- make own manifest for pa-vanir .. need more testing -->
+
+ <!-- repos -->
+  <remote  name="redd"
+           fetch="https://github.com/MikereDD/" />
+  <remote  name="xap"
+           fetch="https://github.com/pax10/" />
+  <remote  name="pax"
+           fetch="https://bitbucket.org/pax10/" />
+  <remote  name="vanir"
+           fetch="https://github.com/VanirAOSP/"
+           review="vaniraosp.goo.im" />
+  <remote  name="cm"
+           fetch="https://github.com/CyanogenMod/"
+           review="review.cyanogenmod.com" />
+  <remote  name="aokp"
+           fetch="git://github.com/"
+           review="gerrit.sudoservers.com" />
+  <remote  name="pa"
+           fetch="https://github.com/ParanoidAndroid/"
+           review="review.paranoid-rom.com" />
+  <remote  name="tiny"
+           fetch="https://github.com/tiny4579/" />
+  <remote  name="franco"
+           fetch="https://github.com/franciscofranco/" />
+  <remote  name="gh"                     
+           fetch="https://github.com/" />
+
+ <!-- remove repos -->
+   <remove-project name="platform/build" />
+   <remove-project name="platform/bionic" />
+   <remove-project name="platform/dalvik" />
+   <remove-project name="platform/development" />
+   <remove-project name="device/asus/grouper" />
+   <remove-project name="device/samsung/toro" />
+   <remove-project name="device/samsung/tuna" />
+   <remove-project name="platform/external/bluetooth/bluedroid" />
+   <remove-project name="platform/external/chromium" />
+   <remove-project name="platform/external/dnsmasq" />
+   <remove-project name="platform/external/e2fsprogs" />
+   <remove-project name="platform/external/elfutils" />
+   <remove-project name="platform/external/embunit" />
+   <remove-project name="platform/external/freetype" />
+   <remove-project name="platform/external/guava" />
+   <remove-project name="platform/external/jpeg" />
+   <remove-project name="platform/external/libpng" />
+   <remove-project name="platform/external/linux-tools-perf" />
+   <remove-project name="platform/external/llvm" />
+   <remove-project name="platform/external/mesa3d" />
+   <remove-project name="platform/external/openssh" />
+   <remove-project name="platform/external/openssl" />
+   <remove-project name="platform/external/oprofile" />
+   <remove-project name="platform/external/ping" />
+   <remove-project name="platform/external/ping6" />
+   <remove-project name="platform/external/quake" />
+   <remove-project name="platform/external/skia" />
+   <remove-project name="platform/external/sonivox" />
+   <remove-project name="platform/external/speex" />
+   <remove-project name="platform/external/sqlite" />
+   <remove-project name="platform/external/stlport" />
+   <remove-project name="platform/external/tcpdump" />
+   <remove-project name="platform/external/v8" />
+   <remove-project name="platform/external/webkit" />
+   <remove-project name="platform/external/wpa_supplicant_8" />
+   <remove-project name="platform/frameworks/av" />
+   <remove-project name="platform/frameworks/base" />
+   <remove-project name="platform/frameworks/compile/libbcc" />
+   <remove-project name="platform/frameworks/compile/mclinker" />
+   <remove-project name="platform/frameworks/compile/slang" />
+   <remove-project name="platform/frameworks/ex" />
+   <remove-project name="platform/frameworks/native" />
+   <remove-project name="platform/frameworks/opt/telephony" />
+   <remove-project name="platform/frameworks/rs" />
+   <remove-project name="platform/frameworks/support" />
+   <remove-project name="platform/frameworks/wilhelm" />
+   <remove-project name="platform/hardware/invensense" />
+   <remove-project name="platform/hardware/libhardware" />
+   <remove-project name="platform/hardware/libhardware_legacy" />
+   <remove-project name="platform/hardware/qcom/display" />
+   <remove-project name="platform/hardware/qcom/gps" />
+   <remove-project name="platform/hardware/qcom/media" />
+   <remove-project name="platform/hardware/ril" />
+   <remove-project name="platform/hardware/samsung_slsi/exynos5" />
+   <remove-project name="platform/hardware/ti/omap4xxx" />
+   <remove-project name="platform/libcore" />
+   <remove-project name="platform/packages/apps/Bluetooth" />
+   <remove-project name="platform/packages/apps/Browser" />
+   <remove-project name="platform/packages/apps/Calculator" />
+   <remove-project name="platform/packages/apps/Camera" />
+   <remove-project name="platform/packages/apps/Contacts" />
+   <remove-project name="platform/packages/apps/DeskClock" />
+   <remove-project name="platform/packages/apps/Gallery2" />
+   <remove-project name="platform/packages/apps/Launcher2" />
+   <remove-project name="platform/packages/apps/LegacyCamera" />
+   <remove-project name="platform/packages/apps/Mms" />
+   <remove-project name="platform/packages/apps/Nfc" />
+   <remove-project name="platform/packages/apps/PackageInstaller" />
+   <remove-project name="platform/packages/apps/Phone" />
+   <remove-project name="platform/packages/apps/QuickSearchBox" />
+   <remove-project name="platform/packages/apps/Settings" />
+   <remove-project name="platform/packages/apps/SoundRecorder" />
+   <remove-project name="platform/packages/apps/Stk" />
+   <remove-project name="platform/packages/inputmethods/LatinIME" />
+   <remove-project name="platform/packages/providers/DownloadProvider" />
+   <remove-project name="platform/packages/providers/TelephonyProvider" />
+   <remove-project name="platform/system/bluetooth" />
+   <remove-project name="platform/system/core" />
+   <remove-project name="platform/system/extras" />
+   <remove-project name="platform/system/security" />
+   <remove-project name="platform/system/vold" />
+   
+ <!-- add repos -->
+   <project name="android_build" path="build" remote="redd" revision="va">
+     <copyfile src="core/root.mk" dest="Makefile" />
+     <copyfile src="tools/BUILD_COMMAND_README" dest="BUILD_COMMAND_README" />
+   </project>
+
+ <!-- devel -->
+   <project name="platform_bionic" path="bionic" remote="vanir" revision="jb42" /> 
+   <project name="platform_dalvik" path="dalvik" remote="vanir" revision="jb42" />
+   <project name="android_development" path="development" remote="cm" revision="cm-10.1" />
+
+ <!-- device -->
+   <project name="android_device_asus_grouper" path="device/asus/grouper" remote="redd" revision="va" />
+   <project name="android_device_samsung_toro" path="device/samsung/toro" remote="redd" revision="va" />
+   <project name="android_device_samsung_tuna" path="device/samsung/tuna" remote="redd" revision="va" />
+
+ <!-- external -->
+   <project name="android_external_bash" path="external/bash" remote="vanir" revision="jb42" />
+   <!-- project name="android_external_bluetooth_bluedroid" path="external/bluetooth/bluedroid" remote="cm" revision="cm-10.1" / -->
+   <project name="android_external_bluetooth_bluedroid" path="external/bluetooth/bluedroid" remote="pa" revision="jellybean" />
+   <project name="external_busybox" path="external/busybox" remote="vanir" revision="jb42" /> 
+   <project name="platform_external_chromium" path="external/chromium" remote="vanir" revision="jb42" /> 
+   <project name="external_clang" path="external/clang" remote="vanir" revision="jb42" /> 
+   <project name="external_dnsmasq" path="external/dnsmasq" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_external_e2fsprogs" path="external/e2fsprogs" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_external_elfutils" path="external/elfutils" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_external_embunit" path="external/embunit" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_external_ffmpeg" path="external/ffmpeg" remote="vanir" revision="linaro-1.0.1" /> 
+   <project name="platform_external_freetype" path="external/freetype" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="android_external_guava" path="external/guava" remote="vanir" revision="linaro_android_4.2.2" />
+   <project name="android_external_htop" path="external/htop" remote="cm" revision="cm-10.1" />
+   <project name="platform_external_libjpeg-turbo" path="external/jpeg" remote="vanir" revision="libjpeg-turbo_1.3.0" />
+   <project name="android_external_libncurses" path="external/libncurses" remote="cm" revision="cm-10.1" />
+   <project name="platform_external_libnl" path="external/libnl" remote="vanir" revision="linaro" /> 
+   <project name="platform_external_libpng" path="external/libpng" remote="vanir" revision="jb42" /> 
+   <project name="platform_external_linux-tools-perf" path="external/linux-tools-perf" remote="vanir" revision="linaro_android_4.2.2" />
+   <project name="external_llvm" path="external/llvm" remote="vanir" revision="jb42" />
+   <project name="android_external_lsof" path="external/lsof" remote="cm" revision="cm-10.1" />
+   <project name="platform_external_lrzsz" path="external/lrzsz" remote="vanir" revision="linaro-master" /> 
+   <project name="platform_external_mesa3d" path="external/mesa3d" remote="vanir" revision="jb42" /> 
+   <project name="platform_external_openssh" path="external/openssh" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_external_openssl" path="external/openssl" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="android_external_oprofile" path="external/oprofile" remote="vanir" revision="jb42" />
+   <project name="android_external_powertop" path="external/powertop" remote="cm" revision="cm-10.1" />
+   <project name="platform_external_ping" path="external/ping" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_external_ping6" path="external/ping6" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_external_quake" path="external/quake" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="android_external_qrngd" path="external/qrngd" remote="cm" revision="cm-10.1" />
+   <project name="android_external_rsync" path="external/rsync" remote="cm" revision="cm-10.1" />
+   <project name="platform_external_skia" path="external/skia" remote="vanir" revision="jb42" /> 
+   <project name="platform_external_sonivox" path="external/sonivox" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_external_speex" path="external/speex" remote="vanir" revision="linaro_mmwg" /> 
+   <project name="platform_external_sqlite" path="external/sqlite" remote="vanir" revision="jb42" /> 
+   <project name="platform_external_stlport" path="external/stlport" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_external_tcpdump" path="external/tcpdump" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_external_v8" path="external/v8" remote="vanir" revision="jb42" /> 
+   <project name="platform_external_webkit" path="external/webkit" remote="vanir" revision="jb42" /> 
+   <project name="platform_external_wpa-supplicant-8" path="external/wpa_supplicant_8" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_external_x264" path="external/x264" remote="vanir" revision="linaro-master" />
+   <project name="JBirdVegas/external_jbirdvegas_mGerrit" path="external/jbirdvegas/mGerrit" remote="github" revision="master" />
+   <project name="external_koush_Superuser" path="external/koush/Superuser" remote="redd" revision="rz" />
+   <project name="external_koush_Widgets" path="external/koush/Widgets" remote="redd" revision="rz" />
+
+ <!-- framework -->
+   <project name="android_frameworks_av" path="frameworks/av" remote="vanir" revision="jb42" />
+   <project name="android_frameworks_base" path="frameworks/base" remote="redd" revision="va" />
+   <project name="platform_frameworks_compile_libbcc" path="frameworks/compile/libbcc" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_frameworks_compile_mclinker" path="frameworks/compile/mclinker" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_frameworks_compile_slang" path="frameworks/compile/slang" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_frameworks_ex" path="frameworks/ex" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_framworks_native" path="frameworks/native" remote="vanir" revision="jb42" /> 
+   <project name="android_frameworks_opt_telephony" path="frameworks/opt/telephony" remote="vanir" revision="jb42" /> 
+   <project name="platform_frameworks_rs" path="frameworks/rs" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_frameworks_support" path="frameworks/support" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_frameworks_wilhelm" path="frameworks/wilhelm" remote="vanir" revision="linaro_android_4.2.2" />
+
+ <!-- hardware -->
+   <project name="android_hardware_invensense" path="hardware/invensense" remote="vanir" revision="jb42" /> 
+   <project name="hardware_libhardware" path="hardware/libhardware" remote="vanir" revision="jb42" /> 
+   <project name="platform_hardware_libhardware-legacy" path="hardware/libhardware_legacy" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="android_hardware_qcom_display" path="hardware/qcom/display" remote="vanir" revision="aosp42" /> 
+   <project name="android_hardware_qcom_gps" path="hardware/qcom/gps" remote="vanir" revision="aosp42" /> 
+   <project name="android_hardware_qcom_media" path="hardware/qcom/media" remote="vanir" revision="aosp42" /> 
+   <project name="platform_hardware_ril" path="hardware/ril" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_hardware_samsung_origen_gralloc-ump" path="hardware/samsung/origen/gralloc_ump" remote="vanir" revision="linaro_android_jb" /> 
+   <project name="platform_hardware_samsung_origen_ump" path="hardware/samsung/origen/ump" remote="vanir" revision="linaro_android_jb" /> 
+   <project name="platform_hardware_samsung_slsi_exynos5" path="hardware/samsung_slsi/exynos5" remote="vanir" revision="jb42" /> 
+   <project name="platform_hardware_ti_omap4xxx" path="hardware/ti/omap4xxx" remote="vanir" revision="jb42" />
+
+ <!-- lib -->
+   <project name="platform_libcore" path="libcore" remote="vanir" revision="jb42" />
+
+ <!-- package -->
+   <project name="FruitsAndVeggies/packages_apps_AppWidgetPicker" path="packages/apps/AppWidgetPicker" remote="gh" revision="jb" />
+   <project name="android_packages_apps_Bluetooth" path="packages/apps/Bluetooth" remote="cm" revision="cm-10.1" />
+   <project name="packages_apps_Browser" path="packages/apps/Browser" remote="vanir" revision="jb42" />
+   <project name="android_packages_apps_Calculator" path="packages/apps/Calculator" remote="cm" revision="cm-10.1" />
+   <project name="android_packages_apps_Camera" path="packages/apps/Camera" remote="vanir" revision="jb42" /> 
+   <project name="packages_apps_Contacts" path="packages/apps/Contacts" remote="vanir" revision="jb42" /> 
+   <project name="platform_packages_apps_DeskClock" path="packages/apps/DeskClock" remote="vanir" revision="jb42" /> 
+   <project name="android_packages_apps_DSPManager" path="packages/apps/DSPManager" remote="vanir" revision="cm-10.1" /> 
+   <project name="packages_apps_Gallery2" path="packages/apps/Gallery2" remote="vanir" revision="jb42" /> 
+   <project name="platform_packages_apps_Launcher2" path="packages/apps/Launcher2" remote="vanir" revision="jb42" /> 
+   <project name="platform_packages_apps_LegacyCamera" path="packages/apps/LegacyCamera" remote="vanir" revision="linaro_android_4.2.2" />
+   <project name="packages_apps_Mms" path="packages/apps/Mms" remote="vanir" revision="jb42" /> 
+   <project name="packages_apps_Nfc" path="packages/apps/Nfc" remote="vanir" revision="jb-mr1" /> 
+   <project name="platform_packages_apps_PackageInstaller" path="packages/apps/PackageInstaller" remote="vanir" revision="jb42" /> 
+   <project name="packages_apps_phone" path="packages/apps/Phone" remote="vanir" revision="jb42" /> 
+   <project name="packages_apps_quicksearchbox" path="packages/apps/QuickSearchBox" remote="vanir" revision="jb42" />
+   <project name="android_packages_apps_Settings" path="packages/apps/Settings" remote="redd" revision="va" />
+   <project name="packages_apps_soundrecorder" path="packages/apps/SoundRecorder" remote="vanir" revision="jb42" /> 
+   <project name="packages_apps_SpeakerProximity" path="packages/apps/SpeakerProximity" remote="vanir" revision="jb42" />
+   <project name="android_packages_apps_Stk" path="packages/apps/Stk" remote="cm" revision="cm-10.1" />
+   <project name="packages_input_LatinIME" path="packages/inputmethods/LatinIME" remote="vanir" revision="jb42" />
+   <project name="android_packages_providers_DownloadProvider" path="packages/providers/DownloadProvider" remote="cm" revision="cm-10.1" />
+   <project name="platform_packages_providers_TelephonyProvider" path="packages/providers/TelephonyProvider" remote="vanir" revision="jb42" />
+
+ <!-- prebuilt -->
+   <project name="prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" remote="pax" revision="jb-devel" />
+   <project name="prebuilts_gcc_linux-x86_arm_arm-eabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" remote="pax" revision="jb-devel" />
+   <project name="prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" remote="pax" revision="jb-devel" />
+   <project name="prebuilts_gcc_linux-x86_arm_arm-eabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" remote="pax" revision="jb-devel" />
+   <project name="prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.7-linaro" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7-linaro" remote="redd" revision="va" />
+
+ <!-- system -->
+   <project name="android_system_bluetooth" path="system/bluetooth" remote="cm" revision="cm-10.1" />
+   <project name="android_system_core" path="system/core" remote="redd" revision="va" />
+   <project name="android_system_extras" path="system/extras" remote="redd" revision="va" />
+   <project name="platform_system_security" path="system/security" remote="vanir" revision="linaro_android_4.2.2" /> 
+   <project name="platform_system_vold" path="system/vold" remote="vanir" revision="jb42" />
+
+ <!-- tools -->
+
+ <!-- vendor -->
+  <!-- project name="proprietary_vendor_asus" path="vendor/asus" remote="redd" revision="va" / -->
+   <project name="proprietary_vendor_samsung" path="vendor/samsung" remote="redd" revision="va" />
+   <project name="android_vendor_raumzero" path="vendor/raumzero" remote="redd" revision="va" />
+   <project name="themes-platform-vendor-tmobile-apps-ThemeChooser" path="vendor/tmobile/apps/ThemeChooser" remote="xap" revision="raum-mr1" />
+   <project name="android_vendor_tmobile_providers_ThemeManager" path="vendor/tmobile/providers/ThemeManager" remote="xap" revision="cm-10.1" />
+   <project name="android_vendor_tmobile_libs_com.tmobile.themes" path="vendor/tmobile/libs/com.tmobile.themes" remote="cm" revision="cm-10.1" />
+   <project name="android_vendor_tmobile_products_themes" path="vendor/tmobile/products/themes" remote="cm" revision="cm-10.1" />
+
+ <!-- kernel -->
+   <project name="AK-berserk" path="kernel/samsung/tuna" remote="xap" revision="ak-cylon-4.2.2-experimental10" />
+   <project name="Grouper-3.1.10" path="kernel/asus/grouper" remote="franco" revision="android-tegra3-grouper-3.1-jb-mr1" />
+
+</manifest>
