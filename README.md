@@ -11,7 +11,7 @@ To be used in:
 
 Myself I create a hidden local_manifests directory then alias the xml file I want to use.
 
-    $ git clone git://github.com/pax10/local_manifest.git -b alm ~/android/.
+    $ git clone git://github.com/pax10/local_manifests.git -b alm ~/android/.local_manifests
     
     $ mkdir -p ~/android/.repo/local_manifests
     
