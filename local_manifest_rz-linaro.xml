@@ -11,6 +11,7 @@
   <remote name="baked" fetch="https://github.com/TeamBAKED" />
   <remote name="franco" fetch="https://github.com/franciscofranco/" />
   <remote name="tiny" fetch="https://github.com/tiny4579/" />
+  <remote name="kejar" fetch="https://github.com/kejar31/" />
  <!-- bitbucket repos -->
   <remote name="xap" fetch="https://bitbucket.org/pax10/" />
  <!-- linaro repos -->
@@ -22,10 +23,19 @@
 
  <!-- remove -->
   <remove-project name="platform/build" />
+  <remove-project name="platform/bionic" />
+  <remove-project name="platform/bootable/recovery" />
+  <remove-project name="platform/dalvik" />
+  <remove-project name="platform/development" />
   <remove-project name="device/asus/grouper" />
   <remove-project name="device/samsung/toro" />
   <remove-project name="device/samsung/tuna" />
   <remove-project name="platform/external/bluetooth/bluedroid" />
+  <remove-project name="platform/external/openssh" />
+  <remove-project name="platform/external/openssl" />
+  <remove-project name="platform/external/stlport" />
+  <remove-project name="platform/external/yaffs2" />
+  <remove-project name="platform/external/zlib" />
   <remove-project name="platform/frameworks/av" />
   <remove-project name="platform/frameworks/base" />
   <remove-project name="platform/frameworks/ex" />
@@ -48,6 +58,7 @@
   <remove-project name="platform/hardware/ti/omap4xxx" />
   <remove-project name="platform/packages/apps/Bluetooth" />
   <remove-project name="platform/packages/apps/Calculator" />
+  <remove-project name="platform/packages/apps/Camera" />"
   <remove-project name="platform/packages/apps/DeskClock" />
   <remove-project name="platform/packages/apps/Gallery2" />
   <remove-project name="platform/packages/apps/Mms" />
@@ -65,16 +76,30 @@
      <copyfile src="tools/BUILD_COMMAND_README" dest="BUILD_COMMAND_README" />
    </project>
 
-  <!-- external -->
+   <project path="bionic" name="android_bionic" remote="kejar" revision="cm-10.1-linaro" />
+   <project name="android_bootable_recovery" path="bootable/recovery" remote="cm" revision="cm-10.1" />
+   <project path="dalvik" name="android_dalvik" remote="kejar" revision="cm-10.1-linaro" />
+   <project path="development" name="platform/development" remote="linaro" revision="linaro_android_4.2.2" />
+
+ <!-- external -->
+   <project name="android_external_bash" path="external/bash" remote="vanir" revision="jb42" />
    <project name="android_external_bluetooth_bluedroid" path="external/bluetooth/bluedroid" remote="cm" revision="cm-10.1" />
+   <project name="external_busybox" path="external/busybox" remote="vanir" revision="jb42" />
    <project name="android_external_htop" path="external/htop" remote="cm" revision="cm-10.1" />
    <project name="android_external_libncurses" path="external/libncurses" remote="cm" revision="cm-10.1" />
    <project name="android_external_lsof" path="external/lsof" remote="cm" revision="cm-10.1" />
+   <project name="platform_external_openssh" path="external/openssh" remote="vanir" revision="linaro_android_4.2.2" />
+   <project name="platform_external_openssl" path="external/openssl" remote="vanir" revision="linaro_android_4.2.2" />
    <project name="android_external_powertop" path="external/powertop" remote="cm" revision="cm-10.1" />
    <project name="android_external_qrngd" path="external/qrngd" remote="cm" revision="cm-10.1" />
    <project name="android_external_rsync" path="external/rsync" remote="cm" revision="cm-10.1" />
+   <project name="platform_external_stlport" path="external/stlport" remote="vanir" revision="linaro_android_4.2.2" />
+   <project name="platform/external/x264" path="external/x264" remote="linaro" revision="linaro-master" />
+   <project name="android_external_yaffs2" path="external/yaffs2" remote="cm" revision="cm-10.1" />
+   <project name="android_external_zlib" path="external/zlib" remote="cm" revision="cm-10.1" />
+   <project name="android_external_vim" path="external/vim" remote="cm" revision="cm-10.1" />
    <project name="external_koush_Superuser" path="external/koush/Superuser" remote="redd" revision="master" />
-   <project name="external_koush_Widgets" path="external/koush/Widgets" remote="redd" revision="master" />i
+   <project name="external_koush_Widgets" path="external/koush/Widgets" remote="redd" revision="master" />
 
  <!-- device -->
    <project name="android_device_asus_grouper" path="device/asus/grouper" remote="redd" revision="va" />
@@ -82,9 +107,9 @@
    <project name="android_device_samsung_tuna" path="device/samsung/tuna" remote="redd" revision="va" />
 
  <!-- frameworks -->
-   <project name="android_frameworks_av" path="frameworks/av" remote="redd" revision="master" />
+   <project name="android_frameworks_av" path="frameworks/av" remote="redd" revision="rz-4.2" />
    <project name="android_frameworks_base" path="frameworks/base" remote="redd" revision="rz-4.2-linaro" />
-   <project name="android_framework_ex" path="frameworks/ex" remote="redd" revision="rz-4.2" />
+   <project name="android_frameworks_ex" path="frameworks/ex" remote="redd" revision="rz-4.2" />
    <project name="android_frameworks_native" path="frameworks/native" remote="redd" revision="rz-4.2" />
 
  <!-- hardware -->
@@ -112,6 +137,7 @@
  <!-- packages -->
    <project name="android_packages_apps_Bluetooth" path="packages/apps/Bluetooth" remote="cm" revision="cm-10.1" />
    <project name="android_packages_apps_Calculator" path="packages/apps/Calculator" remote="cm" revision="cm-10.1" />
+   <project name="android_packages_apps_Camera" path="packages/apps/Camera" remote="redd" revision="rz-4.2" />"""
    <project name="platform_packages_apps_DeskClock" path="packages/apps/DeskClock" remote="vanir" revision="jb42" />
    <project name="android_packages_apps_DSPManager" path="packages/apps/DSPManager" remote="vanir" revision="cm-10.1" />
    <project name="android_packages_apps_Gallery2" path="packages/apps/Gallery2" remote="redd" revision="rz-4.2" />
@@ -133,7 +159,7 @@
  <!-- system -->
    <project name="android_system_bluetooth" path="system/bluetooth" remote="cm" revision="cm-10.1" />
    <project name="android_system_core" path="system/core" remote="redd" revision="rz-4.2-linaro" />
-   <project name="android_system_extras" path="system/extras" remote="vanir" revision="rz-4.2-linaro" />
+   <project name="android_system_extras" path="system/extras" remote="redd" revision="rz-4.2-linaro" />
    <project name="platform_system_security" path="system/security" remote="vanir" revision="linaro_android_4.2.2" />
    <project name="platform_system_vold" path="system/vold" remote="vanir" revision="jb42" />
 
@@ -148,6 +174,6 @@
 
  <!-- kernel -->
    <project name="AK-berserk" path="kernel/samsung/tuna" remote="pax" revision="ak-cylon-4.2.2-experimental10" />
-   <project name="franciscofranco/Grouper-3.1.10" path="kernel/asus/grouper" remote="franco" revision="android-tegra3-grouper-3.1-jb-mr1" />
+   <project name="Grouper-3.1.10" path="kernel/asus/grouper" remote="franco" revision="android-tegra3-grouper-3.1-jb-mr1" />
 
 </manifest>
