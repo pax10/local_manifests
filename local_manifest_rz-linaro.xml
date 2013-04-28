@@ -120,7 +120,7 @@
    <project name="android_external_e2fsprogs" path="external/e2fsprogs" remote="cmdev" revision="cm-10.1-linaro" />
    <project name="android_external_elfutils" path="external/elfutils" remote="cmdev" revision="cm-10.1-linaro" />
    <project name="android_external_embunit" path="external/embunit" remote="cmdev" revision="cm-10.1-linaro" />
-   <project name="platform/external/freetype" path="external/freetype" remote="linaro" revision="refs/tags/android-4.2.2_r1.2" />
+   <project name="platform/external/freetype" path="external/freetype" remote="linaro" revision="refs/tags/android-3.2.2_r1.2" />
    <project name="android_external_htop" path="external/htop" remote="cm" revision="cm-10.1" />
    <project name="android_external_libncurses" path="external/libncurses" remote="cm" revision="cm-10.1" />
    <project name="android_external_linux-tools-perf" path="external/linux-tools-perf" remote="cmdev" revision="cm-10.1-linaro" />
@@ -165,7 +165,7 @@
 
  <!-- hardware -->
    <project name="hardware_libhardware" path="hardware/libhardware" remote="vanir" revision="jb42" />
-   <project name="platform_hardware_libhardware-legacy" path="hardware/libhardware_legacy" remote="linaro" revision="refs/tags/android-4.2.2_r1.2" />
+   <project name="platform/hardware/libhardware/legacy" path="hardware/libhardware_legacy" remote="linaro" revision="refs/tags/android-4.2.2_r1.2" />
    <project name="android_hardware_qcom_audio" path="hardware/qcom/audio" remote="cm" revision="cm-10.1" />
    <project name="android_hardware_qcom_audio-caf" path="hardware/qcom/audio-caf" remote="cm" revision="cm-10.1" />
    <project name="android_hardware_qcom_bt" path="hardware/qcom/bt" remote="cm" revision="cm-10.1" />
