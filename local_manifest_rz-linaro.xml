@@ -120,15 +120,15 @@
    <project name="android_external_e2fsprogs" path="external/e2fsprogs" remote="cmdev" revision="cm-10.1-linaro" />
    <project name="android_external_elfutils" path="external/elfutils" remote="cmdev" revision="cm-10.1-linaro" />
    <project name="android_external_embunit" path="external/embunit" remote="cmdev" revision="cm-10.1-linaro" />
-   <project name="platform/external/freetype" path="external/freetype" remote="linaro" revision="refs/tags/android-3.2.2_r1.2" />
+   <project name="platform/external/freetype" path="external/freetype" remote="linaro" revision="linaro_android_4.2.2" />
    <project name="android_external_htop" path="external/htop" remote="cm" revision="cm-10.1" />
    <project name="android_external_libncurses" path="external/libncurses" remote="cm" revision="cm-10.1" />
    <project name="android_external_linux-tools-perf" path="external/linux-tools-perf" remote="cmdev" revision="cm-10.1-linaro" />
    <project name="android_external_llvm" path="external/llvm" remote="cmdev" revision="cm-10.1-linaro" />
    <project name="android_external_lsof" path="external/lsof" remote="cm" revision="cm-10.1" />
    <project name="android_external_mesa3d" path="external/mesa3d" remote="cmdev" revision="cm-10.1-linaro" />
-   <project name="platform_external_openssh" path="external/openssh" remote="ub" revision="jb-mr1" />
-   <project name="platform_external_openssl" path="external/openssl" remote="ub" revision="jb-mr1" />
+   <project name="external_openssh" path="external/openssh" remote="ub" revision="jb-mr1" />
+   <project name="external_openssl" path="external/openssl" remote="ub" revision="jb-mr1" />
    <project name="android_external_oprofile" path="external/oprofile" remote="cr" revision="jb2" />
    <project name="external_ping" path="external/ping" remote="ub" revision="jb-mr1" />
    <project name="android_external_ping6" path="external/ping6" remote="cmdev" revision="cm-10.1-linaro" />
@@ -136,7 +136,7 @@
    <project name="android_external_qrngd" path="external/qrngd" remote="cm" revision="cm-10.1" />
    <project name="android_external_rsync" path="external/rsync" remote="cm" revision="cm-10.1" />
    <project name="android_external_skia" path="external/skia" remote="cm" revision="cm-10.1" />
-   <project name="platform/external/stlport" path="external/stlport" remote="linaro" revision="refs/tags/android-4.2.2_r1.2" />
+   <project name="platform/external/stlport" path="external/stlport" remote="linaro" revision="linaro_android_4.2.2" />
    <project name="android_external_tcpdump" path="external/tcpdump" remote="cmdev" revision="cm-10.1-linaro" />
    <project name="platform/external/x264" path="external/x264" remote="linaro" revision="linaro-master" />
    <project name="android_external_yaffs2" path="external/yaffs2" remote="cm" revision="cm-10.1" />
@@ -165,7 +165,7 @@
 
  <!-- hardware -->
    <project name="hardware_libhardware" path="hardware/libhardware" remote="vanir" revision="jb42" />
-   <project name="platform/hardware/libhardware/legacy" path="hardware/libhardware_legacy" remote="linaro" revision="refs/tags/android-4.2.2_r1.2" />
+   <project name="platform/hardware/libhardware_legacy" path="hardware/libhardware_legacy" remote="linaro" revision="linaro_android_4.2.2" />
    <project name="android_hardware_qcom_audio" path="hardware/qcom/audio" remote="cm" revision="cm-10.1" />
    <project name="android_hardware_qcom_audio-caf" path="hardware/qcom/audio-caf" remote="cm" revision="cm-10.1" />
    <project name="android_hardware_qcom_bt" path="hardware/qcom/bt" remote="cm" revision="cm-10.1" />
@@ -179,7 +179,7 @@
    <project name="android_hardware_qcom_power" path="hardware/qcom/power" remote="cm" revision="cm-10.1" />
    <project name="android_hardware_qcom_sensors" path="hardware/qcom/sensors" remote="cm" revision="cm-10.1" />
    <project name="android_hardware_qcom_wlan" path="hardware/qcom/wlan" remote="cm" revision="cm-10.1" />
-   <project name="platform/hardware/ril" path="hardware/ril" remote="linaro" revision="refs/tags/android-4.2.2_r1.2" />
+   <project name="platform/hardware/ril" path="hardware/ril" remote="linaro" revision="linaro_android_4.2.2" />
    <project name="platform_hardware_samsung_origen_gralloc-ump" path="hardware/samsung/origen/gralloc_ump" remote="vanir" revision="linaro_android_jb" />
    <project name="platform_hardware_samsung_origen_ump" path="hardware/samsung/origen/ump" remote="vanir" revision="linaro_android_jb" />
    <project name="platform_hardware_samsung_slsi_exynos5" path="hardware/samsung_slsi/exynos5" remote="vanir" revision="jb42" />
