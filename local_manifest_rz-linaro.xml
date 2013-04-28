@@ -89,7 +89,6 @@
   <remove-project name="platform/packages/apps/Mms" />
   <remove-project name="platform/packages/apps/Phone" />
   <remove-project name="platform/packages/apps/Settings" />
-  <remove-project name="platform/packages/Stk" />
   <remove-project name="platform/packages/inputmethods/LatinIME" />
   <remove-project name="platform/packages/providers/TelephonyProvider" />"
   <remove-project name="platform/system/bluetooth" />"
