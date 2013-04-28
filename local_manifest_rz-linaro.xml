@@ -98,7 +98,7 @@
   <remove-project name="platform/system/vold" />
 
  <!-- build -->
-   <project path="build" name="android_build" remote="redd" revision="va">
+   <project path="build" name="android_build" remote="redd" revision="rz-4.2">
      <copyfile src="core/root.mk" dest="Makefile" />
    </project>
 
