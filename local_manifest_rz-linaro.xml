@@ -135,7 +135,7 @@
    <project name="android_external_powertop" path="external/powertop" remote="cm" revision="cm-10.1" />
    <project name="android_external_qrngd" path="external/qrngd" remote="cm" revision="cm-10.1" />
    <project name="android_external_rsync" path="external/rsync" remote="cm" revision="cm-10.1" />
-   <project name="android_external_skia" path="external/skia" remote="cm" revision="cm-10.1" />
+   <project name="android_external_skia" path="external/skia" remote="redd" revision="master" />
    <project name="platform/external/stlport" path="external/stlport" remote="linaro" revision="linaro_android_4.2.2" />
    <project name="android_external_tcpdump" path="external/tcpdump" remote="cmdev" revision="cm-10.1-linaro" />
    <project name="platform/external/x264" path="external/x264" remote="linaro" revision="linaro-master" />
@@ -155,7 +155,7 @@
 
  <!-- frameworks -->
    <project name="android_frameworks_av" path="frameworks/av" remote="redd" revision="rz-4.2" />
-   <project name="android_frameworks_base" path="frameworks/base" remote="redd" revision="rz-4.2-linaro" />
+   <project name="android_frameworks_base" path="frameworks/base" remote="redd" revision="rz-4.2" />
    <project name="android_frameworks_ex" path="frameworks/ex" remote="redd" revision="rz-4.2" />
    <project name="android_frameworks_native" path="frameworks/native" remote="redd" revision="rz-4.2" />
    <project name="android_frameworks_compile_libbcc" path="frameworks/compile/libbcc" remote="cmdev" revision="cm-10.1-linaro" />
@@ -197,7 +197,7 @@
    <project name="android_packages_apps_Mms" path="packages/apps/Mms" remote="redd" revision="rz-4.2" />
    <project name="OctoDroid" path="packages/apps/OctoDroid" remote="redd" revision="master" />
    <project name="android_packages_apps_Phone" path="packages/apps/Phone" remote="redd" revision="rz-4.2" />
-   <project name="android_packages_apps_Settings" path="packages/apps/Settings" remote="redd" revision="rz-4.2-linaro" />
+   <project name="android_packages_apps_Settings" path="packages/apps/Settings" remote="redd" revision="rz-4.2" />
    <project name="packages_apps_SpeakerProximity" path="packages/apps/SpeakerProximity" remote="vanir" revision="jb42" />
    <project name="android_packages_apps_Stk" path="packages/apps/Stk" remote="cm" revision="cm-10.1" />
    <project name="android_packages_apps_Torch" path="packages/apps/Torch" remote="cm" revision="cm-10.1" />
