@@ -51,12 +51,11 @@
    </project>
 
    <project name="Crossbones/android_bionic" path="bionic" remote="gh" revision="jellybean-4.2" />
+   <project name="CyanogenMod/android_bootable_diskinstaller" path="bootable/diskinstaller" remote="gh" revision="cm-10.1" />
+   <project name="CyanogenMod/android_bootable_recovery" path="bootable/recovery" remote="gh" revision="cm-10.1" />
    <project name="Crossbones/android_dalvik" path="dalvik" remote="gh" revision="jellybean-4.2" />
    <project name="Crossbones/android_development" path="development" remote="gh" revision="jellybean-4.2" />
 
-   <project name="CyanogenMod/android_bootable_diskinstaller" path="bootable/diskinstaller" remote="gh" revision="cm-10.1" />
-   <project name="CyanogenMod/android_bootable_recovery" path="bootable/recovery" remote="gh" revision="cm-10.1" />
-  
   <!-- devices -->
    <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="gh" revision="cm-10.1" />
    <project name="android_device_asus_grouper" path="device/asus/grouper" remote="redd" revision="cd" />
