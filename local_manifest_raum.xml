@@ -1,138 +1,277 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <!-- github repos -->
+ <!-- github repos -->
    <remote name="redd" fetch="https://github.com/MikereDD/" />
    <remote name="pax" fetch="https://github.com/pax10/" />
    <remote name="gh" fetch="https://github.com/" />
-  <!-- bitbucket repos -->
+ <!-- bitbucket repos -->
    <remote name="xap" fetch="https://bitbucket.org/pax10/" />
-  <!-- linaro repos -->
-   <remote name="linaro" fetch="http://android.git.linaro.org/git-ro/" review="review.android.git.linaro.org" />
-   <remote name="linaro-other" fetch="git://git.linaro.org/" />
-   <remote name="linaro-private" fetch="ssh://linaro-big-little-switcher-bot@linaro-private.git.linaro.org/srv/linaro-private.git.linaro.org/" />
-   <remote name="zyga" fetch="git://github.com/zyga/" />
-   <remote name="igloocommunity" fetch="git://igloocommunity.org/" />
+   <remote name="bb" fetch="https://bitbucket.org/" />
+ <!-- linaro repos -->
+   <remote  name="linaro" fetch="git://android.git.linaro.org" />
+ <!-- code aurora -->
+   <remote  name="ca" fetch="git://codeaurora.org/" />
 
-  <!-- remove repos -->
-   <remove-project name="platform/build" />
-   <remove-project name="platform/dalvik" />
-   <remove-project name="platform/development" />
-   <remove-project name="platform/bootable/bootloader/legacy" />
-   <remove-project name="platform/bootable/diskinstaller" />
-   <remove-project name="platform/bootable/recovery" />
-   <remove-project name="platform/external/yaffs2" />
-   <remove-project name="platform/external/zlib" />
-   <remove-project name="device/asus/grouper" />
-   <remove-project name="device/samsung/toro" />
-   <remove-project name="device/samsung/tuna" />
-   <remove-project name="platform/frameworks/base" />
-   <remove-project name="platform/frameworks/native" />
-   <remove-project name="platform/frameworks/opt/telephony" />
-   <remove-project name="platform/packages/apps/Browser" />
-   <remove-project name="platform/packages/apps/Camera" />
-   <remove-project name="platform/packages/apps/DeskClock" />
-   <remove-project name="platform/packages/apps/Gallery2" />  
-   <remove-project name="platform/packages/apps/Launcher2" />
-   <remove-project name="platform/packages/apps/Mms" />
-   <remove-project name="platform/packages/apps/Phone" />
-   <remove-project name="platform/packages/apps/Settings" />
-   <remove-project name="platform/packages/providers/TelephonyProvider" />
-   <remove-project name="platform/system/core" />
-   <remove-project name="platform/system/extras" />
-   <remove-project name="platform/system/media" />
-   <remove-project name="platform/system/vold" />
+ <!-- remove repos -->
+  <remove-project name="platform/build" />
+  <remove-project name="platform/dalvik" />
+  <remove-project name="platform/development" />
+  <remove-project name="platform/bootable/bootloader/legacy" />
+  <remove-project name="platform/bootable/diskinstaller" />
+  <remove-project name="platform/bootable/recovery" />
+  <remove-project name="platform/external/android-mock" />
+  <remove-project name="platform/external/bluetooth/bluedroid" />
+  <remove-project name="platform/external/chromium" />
+  <remove-project name="platform/external/clang" />
+  <remove-project name="platform/external/dnsmasq" />
+  <remove-project name="platform/external/e2fsprogs" />
+  <remove-project name="platform/external/elfutils" />
+  <remove-project name="platform/external/embunit" />
+  <remove-project name="platform/external/freetype" />
+  <remove-project name="platform/external/javasqlite" />
+  <remove-project name="platform/external/jpeg" />
+  <remove-project name="platform/external/libpng" />
+  <remove-project name="platform/external/linux-tools-perf" />
+  <remove-project name="platform/external/llvm" />
+  <remove-project name="platform/external/mesa3d" />
+  <remove-project name="platform/external/openssh" />
+  <remove-project name="platform/external/openssl" />
+  <remove-project name="platform/external/oprofile" />
+  <remove-project name="platform/external/ping" />
+  <remove-project name="platform/external/ping6" />
+  <remove-project name="platform/external/quake" />
+  <remove-project name="platform/external/skia" />
+  <remove-project name="platform/external/stlport" />
+  <remove-project name="platform/external/sqlite" />
+  <remove-project name="platform/external/tcpdump" />
+  <remove-project name="platform/external/v8" />
+  <remove-project name="platform/external/valgrind" />
+  <remove-project name="platform/external/webkit" />
+  <remove-project name="platform/external/wpa_supplicant_8" />
+  <remove-project name="platform/external/yaffs2" />
+  <remove-project name="platform/external/zlib" />
+  <remove-project name="device/asus/grouper" />
+  <remove-project name="device/samsung/toro" />
+  <remove-project name="device/samsung/tuna" />
+  <remove-project name="platform/frameworks/base" />
+  <remove-project name="platform/frameworks/native" />
+  <remove-project name="platform/frameworks/opt/telephony" />
+  <!-- remove-project name="platform/frameworks/wilhelm" / -->
+  <remove-project name="platform/hardware/broadcom/wlan" />
+  <remove-project name="platform/hardware/libhardware" />
+  <remove-project name="platform/hardware/libhardware_legacy" />
+  <remove-project name="platform/hardware/msm7k" />
+  <remove-project name="platform/hardware/qcom/audio" />
+  <remove-project name="platform/hardware/qcom/bt" />
+  <remove-project name="platform/hardware/qcom/camera" />
+  <remove-project name="platform/hardware/qcom/display" />
+  <remove-project name="platform/hardware/qcom/gps" />
+  <remove-project name="platform/hardware/qcom/keymaster" />
+  <remove-project name="platform/hardware/qcom/media" />
+  <remove-project name="platform/hardware/qcom/msm8960" />
+  <remove-project name="platform/hardware/qcom/power" />
+  <remove-project name="platform/hardware/qcom/sensors" />
+  <remove-project name="platform/hardware/qcom/wlan" />
+  <remove-project name="platform/hardware/ril" />
+  <remove-project name="platform/hardware/ti/omap4xxx" />
+  <remove-project name="platform/hardware/ti/wlan" />
+  <remove-project name="platform/hardware/ti/wpan" />
+  <!-- remove-project name="platform/libcore" / -->
+  <remove-project name="platform/packages/apps/Browser" />
+  <remove-project name="platform/packages/apps/Camera" />
+  <remove-project name="platform/packages/apps/Calculator" />
+  <remove-project name="platform/packages/apps/Contacts" />
+  <remove-project name="platform/packages/apps/DeskClock" />
+  <remove-project name="platform/packages/apps/Gallery2" />
+  <remove-project name="platform/packages/apps/Launcher2" />
+  <remove-project name="platform/packages/apps/Mms" />
+  <remove-project name="platform/packages/apps/Phone" />
+  <remove-project name="platform/packages/apps/Settings" />
+  <!-- remove-project name="platform/packages/providers/ContactsProvider" / -->
+  <remove-project name="platform/packages/providers/TelephonyProvider" />
+  <remove-project name="platform/prebuilts/misc" />
+  <remove-project name="platform/system/core" />
+  <remove-project name="platform/system/extras" />
+  <remove-project name="platform/system/media" />
+  <remove-project name="platform/system/vold" />
 
-  <!-- add repos -->
+ <!-- repo -->
  
-  <!-- build - boot - dev -->
-   <project name="android_build" path="build" remote="pax" revision="raum" >
-     <copyfile src="core/root.mk" dest="Makefile" />
-   </project>
+ <!-- build - dev -->
+  <!-- project name="android_build" path="build" remote="redd" revision="rz-4.2" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project -->
 
-   <project name="Crossbones/android_bionic" path="bionic" remote="gh" revision="jellybean-4.2" />
-   <project name="CyanogenMod/android_bootable_diskinstaller" path="bootable/diskinstaller" remote="gh" revision="cm-10.1" />
-   <project name="CyanogenMod/android_bootable_recovery" path="bootable/recovery" remote="gh" revision="cm-10.1" />
-   <project name="Crossbones/android_dalvik" path="dalvik" remote="gh" revision="jellybean-4.2" />
-   <project name="Crossbones/android_development" path="development" remote="gh" revision="jellybean-4.2" />
+  <project path="build" name="android_build" remote="pax" revision="raum">
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
 
-  <!-- devices -->
-   <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="gh" revision="cm-10.1" />
-   <project name="android_device_asus_grouper" path="device/asus/grouper" remote="redd" revision="cd" />
-   <project name="android_device_samsung_toro" path="device/samsung/toro" remote="pax" revision="master" />
-   <project name="android_device_samsung_tuna" path="device/samsung/tuna" remote="pax" revision="master" />   
+ <!-- build scripts -->
+  <project name="buildscripts" path="buildscripts" remote="pax" revision="bs" >
+    <copyfile src="build_raum.sh" dest="raumbuilder" />
+  </project>
 
-  <!-- external -->
-   <project name="CarbonDev/platform_external_armzipalign" path="external/armzipalign" remote="gh" revision="master" />
-   <project name="android_external_busybox" path="external/busybox" remote="pax" revision="master" />
-   <project name="CyanogenMod/android_external_bash" path="external/bash" remote="gh" revision="cm-10.1" />
-   <project name="CyanogenMod/android_external_htop" path="external/htop" remote="gh" revision="cm-10.1" />
-   <project name="CyanogenMod/android_external_libncurses" path="external/libncurses" remote="gh" revision="cm-10.1" />
-   <project name="CyanogenMod/android_external_lsof" path="external/lsof" remote="gh" revision="cm-10.1" />
-   <project name="CyanogenMod/android_external_powertop" path="external/powertop" remote="gh" revision="cm-10.1" />
-   <project name="CyanogenMod/android_external_qrngd" path="external/qrngd" remote="gh" revision="cm-10.1" />
-   <project name="platform/external/x264" path="external/x264" remote="linaro" revision="linaro-master" />
-   <project name="CyanogenMod/android_external_yaffs2" path="external/yaffs2" remote="gh" revision="cm-10.1" />
-   <project name="CyanogenMod/android_external_zlib" path="external/zlib" remote="gh" revision="cm-10.1" />
-   <project name="CyanogenMod/android_external_vim" path="external/vim" remote="gh" revision="cm-10.1" />
-   <project name="koush/Superuser" path="external/koush/Superuser" remote="gh" revision="master" />
-   <project name="koush/Widgets" path="external/koush/Widgets" remote="gh" revision="master" />  
+  <project name="CarbonDev/android_bionic" path="bionic" remote="gh" revision="stock" />
+  <project name="loosethisskin/android_dalvik" path="dalvik" remote="gh" revision="cm-10.1-linaro" />
+  <project name="CarbonDev/android_development" path="development" remote="gh" revision="jb2" />
+
+  <project name="CyanogenMod/android_bootable_diskinstaller" path="bootable/diskinstaller" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_bootable_recovery" path="bootable/recovery" remote="gh" revision="cm-10.1" />
   
-  <!-- framework -->  
-   <project name="android_frameworks_base" path="frameworks/base" remote="pax" revision="raum"/>
-   <project name="android_frameworks_native" path="frameworks/native" remote="pax" revision="raum" />
-   <project name="android_frameworks_opt_telephony" path="frameworks/opt/telephony" remote="crossbones" revision="jellybean-4.2" />
+ <!-- devices -->
+  <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="gh" revision="cm-10.1" />
+  <project name="android_device_asus_grouper" path="device/asus/grouper" remote="redd" revision="cd" />
+  <project name="android_device_samsung_toro" path="device/samsung/toro" remote="pax" revision="master" />
+  <project name="android_device_samsung_tuna" path="device/samsung/tuna" remote="pax" revision="master" />
 
-  <!-- packages -->
-   <project name="android_packages_apps_Browser" path="packages/apps/Browser" remote="pax" revision="jb-mr1-dev" />
-   <project name="android_packages_apps_Camera" path="packages/apps/Camera" remote="pax" revision="cm-10.1" />
-   <project name="CyanogenMod/android_packages_apps_DeskClock" path="packages/apps/DeskClock" remote="gh" revision="cm-10.1" />
-   <project name="android_packages_apps_DSPManager" path="packages/apps/DSPManager" remote="pax" revision="raum" />
-   <project name="Crossbones/android_packages_apps_FileManager" path="packages/apps/FileManager" remote="gh" revision="jellybean-4.2" />
-   <project name="android_packages_apps_Gallery2" path="packages/apps/Gallery2" remote="pax" revision="cm-10.1" />
-   <project name="android_packages_apps_Launcher2" path="packages/apps/Launcher2" remote="pax" revision="raum" />
-   <project name="android_packages_apps_Mms" path="packages/apps/Mms" remote="pax" revision="raum" />
-   <project name="android_packages_apps_Phone" path="packages/apps/Phone" remote="pax" revision="raum" />
-   <project name="android_packages_apps_Settings" path="packages/apps/Settings" remote="pax" revision="raum" />
-   <project name="CarbonDev/android_packages_providers_ContactsProvider" path="packages/providers/ContactsProvider" remote="gh" revision="jb2" />
-   <project name="CyanogenMod/android_packages_providers_TelephonyProvider" path="packages/providers/TelephonyProvider" remote="gh" revision="cm-10.1" />
-   <project name="android_packages_apps_Torch" path="packages/apps/Torch" remote="pax" revision="raum" />
-   <project name="VanirAOSP/packages_apps_SpeakerProximity" path="packages/apps/SpeakerProximity" remote="gh" revision="jb42" />
+ <!-- external -->
+  <project name="CyanogenMod/android_external_android-mock" path="external/android-mock" remote="gh" revision="cm-10.1" />
+  <project name="CarbonDev/platform_external_armzipalign" path="external/armzipalign" remote="gh" revision="master" />
+  <project name="CyanogenMod/android_external_bash" path="external/bash" remote="gh" revision="cm-10.1" />
+  <project name="CodeTh3ory/android_external_bluetooth_bluedroid" path="external/bluetooth/bluedroid" remote="gh" revision="master" />
+  <project name="android_external_busybox" path="external/busybox" remote="pax" revision="master" />
+  <project name="UnicornButter/external_chromium" path="external/chromium" remote="gh" revision="jb-mr1" />
+  <project name="CodeTh3ory/android_external_clang" path="external/clang" remote="gh" revision="sm-jb-mr1" />
+  <project name="CyanogenMod/android_external_compiler-rt" path="external/compiler-rt" remote="gh" revision="cm-10.1" />
+  <project name="CarbonDev/external_dnsmasq" path="external/dnsmasq" remote="gh" revision="jb2" />
+  <project name="loosethisskin/android_external_e2fsprogs" path="external/e2fsprogs" remote="gh" revision="cm-10.1-linaro" />
+  <project name="loosethisskin/android_external_elfutils" path="external/elfutils" remote="gh" revision="cm-10.1-linaro" />
+  <project name="loosethisskin/android_external_embunit" path="external/embunit" remote="gh" revision="cm-10.1-linaro" />
+  <project name="loosethisskin/android_external_freetype" path="external/freetype" remote="gh" revision="cm-10.1-linaro" />
+  <project name="CyanogenMod/android_external_htop" path="external/htop" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_external_javasqlite" path="external/javasqlite" remote="gh" revision="cm-10.1"  />
+  <!-- project name="CyanogenMod/android_external_jpeg" path="external/jpeg" remote="gh" revision="cm-10.1" / -->
+  <project name="VanirAOSP/platform_external_libjpeg-turbo" path="external/jpeg" remote="gh" revision="libjpeg-turbo_1.3.0" />
+  <project name="CyanogenMod/android_external_libncurses" path="external/libncurses" remote="gh" revision="cm-10.1" />
+  <!-- project name="CyanogenMod/android_external_libpng" path="external/libpng" remote="gh" revision="cm-10.1" / -->
+  <project name="VanirAOSP/platform_external_libpng" path="external/libpng" remote="gh" revision="jb42" />
+  <project name="loosethisskin/android_external_linux-tools-perf" path="external/linux-tools-perf" remote="gh" revision="cm-10.1-linaro" />
+  <project name="loosethisskin/android_external_llvm" path="external/llvm" remote="gh" revision="cm-10.1-linaro" />
+  <project name="CyanogenMod/android_external_lsof" path="external/lsof" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_external_lzo" path="external/lzo" remote="gh" revision="cm-10.1"  />
+  <project name="VanirAOSP/platform_external_mesa3d" path="external/mesa3d" remote="gh" revision="jb42" />
+  <project name="CyanogenMod/android_external_nano" path="external/nano" remote="gh" revision="cm-10.1" />
+  <project name="UnicornButter/external_openssh" path="external/openssh" remote="gh" revision="jb-mr1" />
+  <project name="UnicornButter/external_openssl" path="external/openssl" remote="gh" revision="jb-mr1" />
+  <project name="CarbonDev/android_external_oprofile" path="external/oprofile" remote="gh" revision="jb2" />
+  <project name="UnicornButter/external_ping" path="external/ping" remote="gh" revision="jb-mr1" />
+  <project name="loosethisskin/android_external_ping6" path="external/ping6" remote="gh" revision="cm-10.1-linaro" />
+  <project name="CyanogenMod/android_external_powertop" path="external/powertop" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_external_qrngd" path="external/qrngd" remote="gh" revision="cm-10.1" />
+  <project name="VanirAOSP/platform_external_quake" path="external/quake" remote="gh" revision="linaro_android_4.2.2" />
+  <project name="CarbonDev/android_external_skia" path="external/skia" remote="gh" revision="jb2" />
+  <project name="UnicornButter/external_stlport" path="external/stlport" remote="gh" revision="jb-mr1" />
+  <project name="CyanogenMod/android_external_sqlite" path="external/sqlite" remote="gh" revision="cm-10.1" />
+  <project name="loosethisskin/android_external_tcpdump" path="external/tcpdump" remote="gh" revision="cm-10.1-linaro" />
+  <project name="UnicornButter/external_v8" path="external/v8" remote="gh" revision="jb-mr1" />
+  <project name="CyanogenMod/android_external_vim" path="external/vim" remote="gh" revision="cm-10.1" />
+  <project name="VanirAOSP/platform_external_webkit" path="external/webkit" remote="gh" revision="jb42" />
+  <project name="CarbonDev/android_external_wpa_supplicant_8" path="external/wpa_supplicant_8" remote="gh" revision="jb2" />
+  <project name="platform/external/x264" path="external/x264" remote="linaro" revision="linaro-master" />
+  <project name="CyanogenMod/android_external_yaffs2" path="external/yaffs2" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_external_zlib" path="external/zlib" remote="gh" revision="cm-10.1" />
+  <project name="koush/Superuser" path="external/koush/Superuser" remote="gh" revision="master" />
+  <project name="koush/Widgets" path="external/koush/Widgets" remote="gh" revision="master" />
+ <!-- framework -->  
+  <project name="android_frameworks_base" path="frameworks/base" remote="pax" revision="raum"/>
+  <project name="android_frameworks_native" path="frameworks/native" remote="pax" revision="raum" />
+  <project name="android_frameworks_opt_telephony" path="frameworks/opt/telephony" remote="pax" revision="raum" />
+  <!-- project name="VanirAOSP/platform_frameworks_wilhelm" path="frameworks/wilhelm" remote="gh" revision="linaro_android_4.2.2" / -->
+
+ <!-- hardware -->
+  <project name="CyanogenMod/android_hardware_broadcom_wlan" path="hardware/broadcom/wlan" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_hardware_libhardware" path="hardware/libhardware" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_hardware_libhardware_legacy" path="hardware/libhardware_legacy" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_hardware_msm7k" path="hardware/msm7k" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_hardware_qcom_audio" path="hardware/qcom/audio" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_hardware_qcom_audio-caf" path="hardware/qcom/audio-caf" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_hardware_qcom_bt" path="hardware/qcom/bt" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_hardware_qcom_camera" path="hardware/qcom/camera" remote="gh" revision="cm-10.1" />
+  <project name="CarbonDev/android_hardware_qcom_display" path="hardware/qcom/display" remote="gh" revision="jb2" />
+  <project name="CarbonDev/android_hardware_qcom_display-caf" path="hardware/qcom/display-caf" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_hardware_qcom_gps" path="hardware/qcom/gps" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_hardware_qcom_keymaster" path="hardware/qcom/keymaster" remote="gh" revision="cm-10.1" />
+  <project name="CarbonDev/android_hardware_qcom_media" path="hardware/qcom/media" remote="gh" revision="jb2"  />
+  <project name="CyanogenMod/android_hardware_qcom_msm8960" path="hardware/qcom/msm8960" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_hardware_qcom_power" path="hardware/qcom/power" remote="gh" revision="cm-10.1"  />
+  <project name="CyanogenMod/android_hardware_qcom_sensors" path="hardware/qcom/sensors" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_hardware_qcom_wlan" path="hardware/qcom/wlan" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_hardware_ril" path="hardware/ril" remote="gh" revision="cm-10.1" />
+  <!-- project name="VanirAOSP/platform_hardware_ril" path="hardware/ril" remote="gh" revision="jb42-master" / -->
+  <project name="VanirAOSP/platform_hardware_samsung_origen_gralloc-ump" path="hardware/samsung/origen/gralloc_ump" remote="gh" revision="linaro_android_jb" />
+  <project name="VanirAOSP/platform_hardware_samsung_origen_ump" path="hardware/samsung/origen/ump" remote="gh" revision="linaro_android_jb" />
+  <project name="VanirAOSP/platform_hardware_samsung_slsi_exynos5" path="hardware/samsung_slsi/exynos5" remote="gh" revision="jb42" />
+  <project name="CyanogenMod/android_hardware_ti_omap4xxx" path="hardware/ti/omap4xxx" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_hardware_ti_wlan" path="hardware/ti/wlan" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_hardware_ti_wpan" path="hardware/ti/wpan" remote="gh" revision="cm-10.1" />
+
+ <!-- lib -->
+  <!-- project name="VanirAOSP/platform_libcore" path="libcore" remote="gh" revision="jb42-master" / -->
+
+ <!-- packages -->
+  <project name="android_packages_apps_Browser" path="packages/apps/Browser" remote="pax" revision="jb-mr1-dev" />
+  <project name="VanirAOSP/android_packages_apps_Camera" path="packages/apps/Camera" remote="gh" revision="jb42" />
+  <project name="CyanogenMod/android_packages_apps_Calculator" path="packages/apps/Calculator" remote="gh" revision="cm-10.1" />
+  <project name="VanirAOSP/packages_apps_Contacts" path="packages/apps/Contacts" remote="gh" revision="jb42" />
+  <project name="CyanogenMod/android_packages_apps_DeskClock" path="packages/apps/DeskClock" remote="gh" revision="cm-10.1" />
+  <project name="CodeTh3ory/android_packages_apps_DSPManager" path="packages/apps/DSPManager" remote="gh" revision="cm-10.1" />
+  <!-- project name="android_packages_apps_DSPManager" path="packages/apps/DSPManager" remote="pax" revision="raum" / -->
+  <project name="CyanogenMod/android_packages_apps_CMFileManager" path="packages/apps/FileManager" remote="gh" revision="cm-10.1" />
+  <!-- project name="android_packages_apps_Gallery2" path="packages/apps/Gallery2" remote="pax" revision="cm-10.1" / -->
+  <project name="VanirAOSP/packages_apps_Gallery2" path="packages/apps/Gallery2" remote="gh" revision="jb42" />
+  <project name="android_packages_apps_Launcher2" path="packages/apps/Launcher2" remote="pax" revision="raum" />
+  <project name="VanirAOSP/packages_apps_Mms" path="packages/apps/Mms" remote="gh" revision="jb42" />
+  <project name="VanirAOSP/packages_apps_phone" path="packages/apps/Phone" remote="gh" revision="jb42" />
+  <project name="CyanogenMod/android_packages_apps_SamsungServiceMode" path="packages/apps/SamsungServiceMode" remote="gh" revision="cm-10.1" />
+  <project name="android_packages_apps_Settings" path="packages/apps/Settings" remote="pax" revision="raum" />
+  <project name="CyanogenMod/android_packages_apps_Stk" path="packages/apps/Stk" remote="gh" revision="cm-10.1" />
+  <!-- project name="CarbonDev/android_packages_providers_ContactsProvider" path="packages/providers/ContactsProvider" remote="gh" revision="jb2" / -->
+  <project name="VanirAOSP/platform_packages_providers_TelephonyProvider" path="packages/providers/TelephonyProvider" remote="gh" revision="jb42" />
+  <project name="android_packages_apps_rZWallpapers" path="packages/apps/rZWallpapers" remote="pax" revision="master" />
+  <project name="android_packages_apps_Torch" path="packages/apps/Torch" remote="pax" revision="raum" />
+  <project name="VanirAOSP/packages_apps_SpeakerProximity" path="packages/apps/SpeakerProximity" remote="gh" revision="jb42" />
   
-  <!-- prebuilt -->
-   <project name="CyanogenMod/android_prebuilt" path="prebuilt" remote="gh" revision="cm-10.1" />
-   <project name="prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" remote="xap" revision="jb-devel" />
-   <project name="prebuilts_gcc_linux-x86_arm_arm-eabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" remote="xap" revision="jb-devel" />
-   <project name="prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" remote="xap" revision="jb-devel" />
-   <project name="prebuilts_gcc_linux-x86_arm_arm-eabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" remote="xap" revision="jb-devel" />
-   <project name="prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.7-linaro" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7-linaro" remote="redd" revision="va" />  
-
-  <!-- system -->
-   <project name="android_system_core" path="system/core" remote="pax" revision="raum" />
-   <project name="android_system_extras" path="system/extras" remote="pax" revision="raum" />
-   <project name="android_system_media" path="system/media" remote="pax" revision="master" />
-   <project name="Crossbones/android_system_vold" path="system/vold" remote="gh" revision="jellybean-4.2" />
-
-  <!-- vendor -->
-   <project name="TheMuppets/proprietary_vendor_audience" path="vendor/audience" remote="gh" revision="cm-10.1" />
-   <project name="TheMuppets/proprietary_vendor_asus" path="vendor/asus" remote="gh" revision="cm-10.1" />
-   <project name="vendor_broadcom" path="vendor/broadcom" remote="pax" revision="master" />
-   <project name="TheMuppets/proprietary_vendor_elan" path="vendor/elan" remote="gh" revision="cm-10.1" />
-   <project name="vendor_imgtec" path="vendor/imgtec" remote="pax" revision="master" />
-   <project name="vendor_invensense" path="vendor/invensense" remote="pax" revision="master" />
-   <project name="vendor_nvidia" path="vendor/nvidia" remote="pax" revision="master" />
-   <project name="vendor_nxp" path="vendor/nzp" remote="pax" revision="master" />
-   <project name="vendor_widevine" path="vendor/widevine" remote="pax" revision="master" />
-   <project name="vendor_ti" path="vendor/ti" remote="pax" revision="master" />
-   <project name="vendor_samsung" path="vendor/samsung" remote="pax" revision="master" />
-   <project name="CarbonDev/proprietary_vendor_qcom" path="vendor/qcom" remote="gh" revision="jellybean" />
-   <project name="vendor_google" path="vendor/google" remote="redd" revision="raum" />
-   <project name="android_vendor_pax" path="vendor/raumzero" remote="pax" revision="raum" />
-   <project name="CyanogenMod/themes-platform-vendor-tmobile-apps-ThemeChooser" path="vendor/tmobile/apps/ThemeChooser" remote="gh" revision="cm-10.1" />
-   <project name="CyanogenMod/android_vendor_tmobile_libs_com.tmobile.themes" path="vendor/tmobile/libs/com.tmobile.themes" remote="gh" revision="cm-10.1" />
-   <project name="CodeTh3ory/android_vendor_tmobile_providers_ThemeManager" path="vendor/tmobile/providers/ThemeManager" remote="gh" revision="cm-10.1" />
-   <project name="CyanogenMod/android_vendor_tmobile_products_themes" path="vendor/tmobile/products/themes" remote="gh" revision="cm-10.1" />
+ <!-- prebuilt -->
+  <project name="CyanogenMod/android_prebuilt" path="prebuilt" remote="gh" revision="cm-10.1" />
+  <!-- project name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" groups="linux,arm" revision="master" />
+  <project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" groups="linux,arm" revision="master" / -->
+  <project name="prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" remote="xap" revision="jb-devel" />
+  <project name="prebuilts_gcc_linux-x86_arm_arm-eabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" remote="xap" revision="jb-devel" />
+  <project name="prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" remote="xap" revision="jb-devel" />
+  <project name="prebuilts_gcc_linux-x86_arm_arm-eabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" remote="xap" revision="jb-devel" />
+  <!-- project name="prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.7-linaro" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7-linaro" remote="redd" revision="va" / -->
+  <!-- project name="codefirex/prebuilts_gcc_linux-x86_arm_arm-eabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" remote="bb" revision="jb-devel" />
+  <project name="codefirex/prebuilts_gcc_linux-x86_arm_arm-eabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" remote="bb" revision="jb-devel" />
+  <project name="codefirex/prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" remote="bb" revision="jb-devel" / -->
+  <project name="codefirex/prebuilts_misc" path="prebuilts/misc" remote="bb" revision="jb-devel" />
+  
+ <!-- system -->
+  <project name="android_system_core" path="system/core" remote="pax" revision="raum" />
+  <project name="android_system_extras" path="system/extras" remote="pax" revision="raum" />
+  <project name="android_system_media" path="system/media" remote="pax" revision="master" />
+  <project name="CyanogenMod/android_system_vold" path="system/vold" remote="gh" revision="cm-10.1" />
+  
+ <!-- vendor -->
+  <project name="TheMuppets/proprietary_vendor_audience" path="vendor/audience" remote="gh" revision="cm-10.1" />
+  <project name="TheMuppets/proprietary_vendor_asus" path="vendor/asus" remote="gh" revision="cm-10.1" />
+  <project name="vendor_broadcom" path="vendor/broadcom" remote="pax" revision="master" />
+  <project name="TheMuppets/proprietary_vendor_elan" path="vendor/elan" remote="gh" revision="cm-10.1" />
+  <project name="vendor_imgtec" path="vendor/imgtec" remote="pax" revision="master" />
+  <project name="vendor_invensense" path="vendor/invensense" remote="pax" revision="master" />
+  <project name="vendor_nvidia" path="vendor/nvidia" remote="pax" revision="master" />
+  <project name="vendor_nxp" path="vendor/nzp" remote="pax" revision="master" />
+  <project name="vendor_widevine" path="vendor/widevine" remote="pax" revision="master" />
+  <project name="vendor_ti" path="vendor/ti" remote="pax" revision="master" />
+  <project name="vendor_samsung" path="vendor/samsung" remote="pax" revision="master" />
+  <project name="CarbonDev/proprietary_vendor_qcom" path="vendor/qcom" remote="gh" revision="jellybean" />
+  <project name="vendor_google" path="vendor/google" remote="redd" revision="master" />
+  <project name="android_vendor_pax" path="vendor/raumzero" remote="pax" revision="raum" />
+  <project name="CyanogenMod/themes-platform-vendor-tmobile-apps-ThemeChooser" path="vendor/tmobile/apps/ThemeChooser" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_vendor_tmobile_libs_com.tmobile.themes" path="vendor/tmobile/libs/com.tmobile.themes" remote="gh" revision="cm-10.1" />
+  <project name="CodeTh3ory/android_vendor_tmobile_providers_ThemeManager" path="vendor/tmobile/providers/ThemeManager" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_vendor_tmobile_products_themes" path="vendor/tmobile/products/themes" remote="gh" revision="cm-10.1" />
    
-  <!-- kernel -->
-   <project name="CodeTh3ory/android_kernel_samsung_tuna" path="kernel/samsung/tuna" remote="gh" revision="jb4.2" />
+ <!-- kernel -->
+  <project name="CodeTh3ory/android_kernel_samsung_tuna" path="kernel/samsung/tuna" remote="gh" revision="jb4.2" />
 </manifest> 
