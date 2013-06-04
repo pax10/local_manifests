@@ -217,7 +217,7 @@
   <project name="CyanogenMod/android_packages_apps_Calculator" path="packages/apps/Calculator" remote="gh" revision="cm-10.1" />
   <project name="android_packages_apps_Contacts" path="packages/apps/Contacts" remote="redd" revision="rz-4.2" />
   <project name="CyanogenMod/android_packages_apps_DeskClock" path="packages/apps/DeskClock" remote="gh" revision="cm-10.1" />
-  <project name="android_packages_apps_DSPManager" path="packages/apps/DSPManager" remote="redd" revision="rz-4.2" />
+  <project name="CodeTh3ory/android_packages_apps_DSPManager" path="packages/apps/DSPManager" remote="gh" revision="cm-10.1" />
   <project name="CyanogenMod/android_packages_apps_CMFileManager" path="packages/apps/FileManager" remote="gh" revision="cm-10.1" />
   <project name="android_packages_apps_Gallery2" path="packages/apps/Gallery2" remote="redd" revision="rz-4.2" />
   <project name="android_packages_apps_Launcher2" path="packages/apps/Launcher2" remote="pax" revision="raum" />
