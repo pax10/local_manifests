@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
  <!-- github repos -->
@@ -55,9 +55,9 @@
   <remove-project name="device/samsung/toro" />
   <remove-project name="device/samsung/tuna" />
   <remove-project name="platform/frameworks/base" />
-  <!-- remove-project name="platform/frameworks/native" />
+  <!-- remove-project name="platform/frameworks/native" / -->
   <remove-project name="platform/frameworks/opt/telephony" />
-  <remove-project name="platform/frameworks/wilhelm" / -->
+  <!-- remove-project name="platform/frameworks/wilhelm" / -->
   <remove-project name="platform/hardware/broadcom/wlan" />
   <remove-project name="platform/hardware/libhardware" />
   <remove-project name="platform/hardware/libhardware_legacy" />
@@ -80,17 +80,17 @@
   <!-- remove-project name="platform/libcore" / -->
   <remove-project name="platform/packages/apps/Bluetooth" />
   <remove-project name="platform/packages/apps/Browser" />
-  <!-- remove-project name="platform/packages/apps/Camera" / -->
+  <remove-project name="platform/packages/apps/Camera" />
   <remove-project name="platform/packages/apps/Calculator" />
-  <!-- remove-project name="platform/packages/apps/Contacts" / -->
+  <remove-project name="platform/packages/apps/Contacts" />
   <remove-project name="platform/packages/apps/DeskClock" />
-  <!-- remove-project name="platform/packages/apps/Gallery2" / -->
+  <remove-project name="platform/packages/apps/Gallery2" />
   <remove-project name="platform/packages/apps/Launcher2" />
-  <!-- remove-project name="platform/packages/apps/Mms" />
-  <remove-project name="platform/packages/apps/Phone" / -->
+  <remove-project name="platform/packages/apps/Mms" />
+  <remove-project name="platform/packages/apps/Phone" />
   <remove-project name="platform/packages/apps/Settings" />
   <!-- remove-project name="platform/packages/providers/ContactsProvider" / -->
-  <!-- remove-project name="platform/packages/providers/TelephonyProvider" / -->
+  <remove-project name="platform/packages/providers/TelephonyProvider" />
   <remove-project name="platform/prebuilts/misc" />
   <remove-project name="platform/system/bluetooth" />
   <remove-project name="platform/system/core" />
@@ -132,7 +132,7 @@
   <project name="CarbonDev/platform_external_armzipalign" path="external/armzipalign" remote="gh" revision="master" />
   <project name="CyanogenMod/android_external_bash" path="external/bash" remote="gh" revision="cm-10.1" />
   <project name="CodeTh3ory/android_external_bluetooth_bluedroid" path="external/bluetooth/bluedroid" remote="gh" revision="master" />
-  <project name="android_external_busybox" path="external/busybox" remote="pax" revision="master" />
+  <project name="android_external_busybox" path="external/busybox" remote="redd" revision="rz-4.2" />
   <project name="UnicornButter/external_chromium" path="external/chromium" remote="gh" revision="jb-mr1" />
   <project name="CodeTh3ory/android_external_clang" path="external/clang" remote="gh" revision="sm-jb-mr1" />
   <project name="CyanogenMod/android_external_compiler-rt" path="external/compiler-rt" remote="gh" revision="cm-10.1" />
@@ -178,7 +178,7 @@
  <!-- framework -->
   <project name="android_frameworks_base" path="frameworks/base" remote="redd" revision="tmo-test"/>
   <!-- project name="android_frameworks_native" path="frameworks/native" remote="pax" revision="raum" / -->
-  <!-- project name="android_frameworks_opt_telephony" path="frameworks/opt/telephony" remote="pax" revision="raum" / -->
+  <project name="android_frameworks_opt_telephony" path="frameworks/opt/telephony" remote="redd" revision="rz-4.2" />
   <!-- project name="VanirAOSP/platform_frameworks_wilhelm" path="frameworks/wilhelm" remote="gh" revision="linaro_android_4.2.2" / -->
 
  <!-- hardware -->
@@ -200,7 +200,6 @@
   <project name="CyanogenMod/android_hardware_qcom_sensors" path="hardware/qcom/sensors" remote="gh" revision="cm-10.1" />
   <project name="CyanogenMod/android_hardware_qcom_wlan" path="hardware/qcom/wlan" remote="gh" revision="cm-10.1" />
   <project name="CyanogenMod/android_hardware_ril" path="hardware/ril" remote="gh" revision="cm-10.1" />
-  <!-- project name="VanirAOSP/platform_hardware_ril" path="hardware/ril" remote="gh" revision="jb42-master" / -->
   <project name="VanirAOSP/platform_hardware_samsung_origen_gralloc-ump" path="hardware/samsung/origen/gralloc_ump" remote="gh" revision="linaro_android_jb" />
   <project name="VanirAOSP/platform_hardware_samsung_origen_ump" path="hardware/samsung/origen/ump" remote="gh" revision="linaro_android_jb" />
   <project name="VanirAOSP/platform_hardware_samsung_slsi_exynos5" path="hardware/samsung_slsi/exynos5" remote="gh" revision="jb42" />
@@ -214,23 +213,20 @@
  <!-- packages -->
   <project name="CyanogenMod/android_packages_apps_Bluetooth" path="packages/apps/Bluetooth" remote="gh" revision="cm-10.1" />
   <project name="android_packages_apps_Browser" path="packages/apps/Browser" remote="pax" revision="jb-mr1-dev" />
-  <!-- project name="VanirAOSP/android_packages_apps_Camera" path="packages/apps/Camera" remote="gh" revision="jb42" / -->
+  <project name="android_packages_apps_camera" path="packages/apps/Camera" remote="redd" revision="rz-4.2" />
   <project name="CyanogenMod/android_packages_apps_Calculator" path="packages/apps/Calculator" remote="gh" revision="cm-10.1" />
-  <!-- project name="VanirAOSP/packages_apps_Contacts" path="packages/apps/Contacts" remote="gh" revision="jb42" / -->
+  <project name="android_packages_apps_Contacts" path="packages/apps/Contacts" remote="redd" revision="rz-4.2" />
   <project name="CyanogenMod/android_packages_apps_DeskClock" path="packages/apps/DeskClock" remote="gh" revision="cm-10.1" />
-  <project name="CodeTh3ory/android_packages_apps_DSPManager" path="packages/apps/DSPManager" remote="gh" revision="cm-10.1" />
-  <!-- project name="android_packages_apps_DSPManager" path="packages/apps/DSPManager" remote="pax" revision="raum" / -->
+  <project name="android_packages_apps_DSPManager" path="packages/apps/DSPManager" remote="redd" revision="rz-4.2" />
   <project name="CyanogenMod/android_packages_apps_CMFileManager" path="packages/apps/FileManager" remote="gh" revision="cm-10.1" />
-  <!-- project name="android_packages_apps_Gallery2" path="packages/apps/Gallery2" remote="pax" revision="cm-10.1" / -->
-  <!-- project name="VanirAOSP/packages_apps_Gallery2" path="packages/apps/Gallery2" remote="gh" revision="jb42" / -->
+  <project name="android_packages_apps_Gallery2" path="packages/apps/Gallery2" remote="redd" revision="rz-4.2" />
   <project name="android_packages_apps_Launcher2" path="packages/apps/Launcher2" remote="pax" revision="raum" />
-  <!-- project name="VanirAOSP/packages_apps_Mms" path="packages/apps/Mms" remote="gh" revision="jb42" />
-  <project name="VanirAOSP/packages_apps_phone" path="packages/apps/Phone" remote="gh" revision="jb42" />
-  <project name="CyanogenMod/android_packages_apps_SamsungServiceMode" path="packages/apps/SamsungServiceMode" remote="gh" revision="cm-10.1" / -->
+  <project name="android_packages_apps_Mms" path="packages/apps/Mms" remote="redd" revision="rz-4.2" />
+  <project name="android_packages_apps_phone" path="packages/apps/Phone" remote="redd" revision="rz-4.2" />
+  <!-- project name="CyanogenMod/android_packages_apps_SamsungServiceMode" path="packages/apps/SamsungServiceMode" remote="gh" revision="cm-10.1" / -->
   <project name="android_packages_apps_Settings" path="packages/apps/Settings" remote="redd" revision="rz-4.2-test" />
   <project name="CyanogenMod/android_packages_apps_Stk" path="packages/apps/Stk" remote="gh" revision="cm-10.1" />
-  <!-- project name="CarbonDev/android_packages_providers_ContactsProvider" path="packages/providers/ContactsProvider" remote="gh" revision="jb2" / -->
-  <!-- project name="VanirAOSP/platform_packages_providers_TelephonyProvider" path="packages/providers/TelephonyProvider" remote="gh" revision="jb42" / -->
+  <project name="CyanogenMod/android_packages_providers_TelephonyProvider" path="packages/providers/TelephonyProvider" remote="gh" revision="cm-10.1" />
   <project name="android_packages_apps_rZWallpapers" path="packages/apps/rZWallpapers" remote="pax" revision="master" />
   <project name="android_packages_apps_Torch" path="packages/apps/Torch" remote="pax" revision="raum" />
   <project name="VanirAOSP/packages_apps_SpeakerProximity" path="packages/apps/SpeakerProximity" remote="gh" revision="jb42" />
