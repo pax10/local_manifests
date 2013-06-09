@@ -35,9 +35,10 @@
   <project name="imoseyon/leanKernel-galaxy-nexus" path="kernel/samsung/tuna" remote="gh" revision="lk-jb-mr1" />
 
   <!-- packages -->
-  <project name="android_packages_apps_Launcher2" path="packages/apps/Launcher2" remote="pax" revision="raum" />
   <project name="android_packages_apps_Mms" path="packages/apps/Mms" remote="pax" revision="jellybean-4.2-tmo" />
   <project name="android_packages_apps_Phone" path="packages/apps/Phone" remote="pax" revision="jellybean-4.2-tmo" />
+  <project name="android_packages_apps_Launcher2" path="packages/apps/rZLauncher" remote="pax" revision="raum" />
+  <project name="android_packages_apps_rZWallpapers" path="packages/apps/rZWallpapers" remote="pax" revision="master" />
   <project name="android_packages_apps_Settings-cb" path="packages/apps/Settings" remote="pax" revision="jellybean-4.2-tmo" />
 
   <!-- prebuilts -->
