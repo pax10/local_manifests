@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <!-- 
+         My local_manifest for building Crossbones ROM
+             https://github.com/Crossbones/
+         Adds:
+              Theme Engine(CyanogenMod)
+              Superuser embeded-Settings(koush)
+              Inline Kernel(imoseyon/LeanKernel)
+                                                    -->
+
+    <!-- repos -->
+    <remote name="pax" fetch="https://github.com/pax10/" />
+    <remote name="xap" fetch="https://bitbucket.org/pax10/" />
+    <remote name="gh"  fetch="https://github.com/" />
+
+  <!-- remove projects -->
+  <remove-project name="android_build" />
+  <remove-project name="android_frameworks_base" />
+  <remove-project name="android_packages_apps_Launcher2" />
+  <remove-project name="android_packages_apps_Mms" />
+  <remove-project name="platform/packages/apps/Phone" />
+  <remove-project name="android_packages_apps_Settings" />
+  <remove-project name="android_vendor_crossbones" />
+
+  <project path="build" name="android_build" remote="pax" revision="crossbones">
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+
+  <!-- frameworks -->
+  <project name="android_frameworks_base-cb" path="frameworks/base" remote="pax" revision="jellybean-4.2-tmo" />
+
+  <!-- kernel -->
+  <project name="imoseyon/leanKernel-galaxy-nexus" path="kernel/samsung/tuna" remote="gh" revision="lk-jb-mr1" />
+
+  <!-- packages -->
+  <project name="android_packages_apps_Launcher2" path="packages/apps/Launcher2" remote="pax" revision="raum" />
+  <project name="android_packages_apps_Mms" path="packages/apps/Mms" remote="pax" revision="jellybean-4.2-tmo" />
+  <project name="android_packages_apps_Phone" path="packages/apps/Phone" remote="pax" revision="jellybean-4.2-tmo" />
+  <project name="android_packages_apps_Settings-cb" path="packages/apps/Settings" remote="pax" revision="jellybean-4.2-tmo" />
+
+  <!-- prebuilts -->
+  <project name="prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" remote="xap" revision="jb-devel" />
+  <project name="prebuilts_gcc_linux-x86_arm_arm-eabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" remote="xap" revision="jb-devel" />
+  <project name="prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" remote="xap" revision="jb-devel" />
+  <project name="prebuilts_gcc_linux-x86_arm_arm-eabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" remote="xap" revision="jb-devel" />
+
+  <!-- vendor -->
+  <project name="android_vendor_pax" path="vendor/crossbones" remote="pax" revision="crossbones" />
+
+</manifest>
