@@ -14,16 +14,18 @@
    <remote  name="ca" fetch="git://codeaurora.org/" />
 
  <!-- remove repos -->
+  <remove-project name="platform/bionic" />
   <remove-project name="platform/build" />
   <remove-project name="platform/dalvik" />
   <remove-project name="platform/development" />
-  <remove-project name="platform/bootable/bootloader/legacy" />
+  <!-- remove-project name="platform/bootable/bootloader/legacy" / -->
   <remove-project name="platform/bootable/diskinstaller" />
   <remove-project name="platform/bootable/recovery" />
   <remove-project name="platform/external/android-mock" />
-  <remove-project name="platform/external/bluetooth/bluedroid" />
+  <!-- remove-project name="platform/external/bluetooth/bluedroid" / -->
   <remove-project name="platform/external/chromium" />
   <remove-project name="platform/external/clang" />
+  <!-- remove-project name="platform/external/compiler-rt" / -->
   <remove-project name="platform/external/dnsmasq" />
   <remove-project name="platform/external/e2fsprogs" />
   <remove-project name="platform/external/elfutils" />
@@ -49,14 +51,14 @@
   <remove-project name="platform/external/valgrind" />
   <remove-project name="platform/external/webkit" />
   <remove-project name="platform/external/wpa_supplicant_8" />
-  <remove-project name="platform/external/yaffs2" />
+  <!-- remove-project name="platform/external/yaffs2" / -->
   <remove-project name="platform/external/zlib" />
   <remove-project name="device/asus/grouper" />
   <remove-project name="device/samsung/toro" />
   <remove-project name="device/samsung/tuna" />
   <remove-project name="platform/frameworks/base" />
   <!-- remove-project name="platform/frameworks/native" / -->
-  <remove-project name="platform/frameworks/opt/telephony" />
+  <!-- remove-project name="platform/frameworks/opt/telephony" / -->
   <!-- remove-project name="platform/frameworks/wilhelm" / -->
   <remove-project name="platform/hardware/broadcom/wlan" />
   <remove-project name="platform/hardware/libhardware" />
@@ -78,36 +80,36 @@
   <remove-project name="platform/hardware/ti/wlan" />
   <remove-project name="platform/hardware/ti/wpan" />
   <!-- remove-project name="platform/libcore" / -->
-  <remove-project name="platform/packages/apps/Bluetooth" />
-  <remove-project name="platform/packages/apps/Browser" />
-  <remove-project name="platform/packages/apps/Camera" />
+  <!-- remove-project name="platform/packages/apps/Bluetooth" / -->
+  <!-- remove-project name="platform/packages/apps/Browser" />
+  <remove-project name="platform/packages/apps/Camera" / -->
   <remove-project name="platform/packages/apps/Calculator" />
-  <remove-project name="platform/packages/apps/Contacts" />
+  <!-- remove-project name="platform/packages/apps/Contacts" / -->
   <remove-project name="platform/packages/apps/DeskClock" />
-  <remove-project name="platform/packages/apps/Gallery2" />
+  <!-- remove-project name="platform/packages/apps/Gallery2" / -->
   <remove-project name="platform/packages/apps/Launcher2" />
-  <remove-project name="platform/packages/apps/Mms" />
-  <remove-project name="platform/packages/apps/Phone" />
+  <!-- remove-project name="platform/packages/apps/Mms" />
+  <remove-project name="platform/packages/apps/Phone" / -->
   <remove-project name="platform/packages/apps/Settings" />
   <!-- remove-project name="platform/packages/providers/ContactsProvider" / -->
-  <remove-project name="platform/packages/providers/TelephonyProvider" />
+  <!-- remove-project name="platform/packages/providers/TelephonyProvider" / -->
   <remove-project name="platform/prebuilts/misc" />
-  <remove-project name="platform/system/bluetooth" />
+  <!-- remove-project name="platform/system/bluetooth" / -->
   <remove-project name="platform/system/core" />
   <remove-project name="platform/system/extras" />
-  <!-- remove-project name="platform/system/media" / -->
+  <remove-project name="platform/system/media" />
   <remove-project name="platform/system/vold" />
 
  <!-- repo -->
 
  <!-- build - dev -->
-  <project name="android_build" path="build" remote="redd" revision="rz-4.2" >
-    <copyfile src="core/root.mk" dest="Makefile" />
-  </project>
-
-  <!-- project path="build" name="android_build" remote="pax" revision="raum">
+  <!-- project name="android_build" path="build" remote="redd" revision="rz-4.2" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project -->
+
+  <project path="build" name="android_build" remote="redd" revision="raum">
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
 
  <!-- build scripts -->
   <project name="buildscripts" path="buildscripts" remote="pax" revision="bs" >
@@ -116,7 +118,8 @@
 
   <project name="CarbonDev/android_bionic" path="bionic" remote="gh" revision="stock" />
   <project name="loosethisskin/android_dalvik" path="dalvik" remote="gh" revision="cm-10.1-linaro" />
-  <project name="CarbonDev/android_development" path="development" remote="gh" revision="jb2" />
+  <!-- project name="CarbonDev/android_development" path="development" remote="gh" revision="jb2" / -->
+  <project name="codefirex/development" path="development" remote="bb" revision="jb-devel" />
 
   <project name="CyanogenMod/android_bootable_diskinstaller" path="bootable/diskinstaller" remote="gh" revision="cm-10.1" />
   <project name="CyanogenMod/android_bootable_recovery" path="bootable/recovery" remote="gh" revision="cm-10.1" />
@@ -131,11 +134,11 @@
   <project name="CyanogenMod/android_external_android-mock" path="external/android-mock" remote="gh" revision="cm-10.1" />
   <project name="CarbonDev/platform_external_armzipalign" path="external/armzipalign" remote="gh" revision="master" />
   <project name="CyanogenMod/android_external_bash" path="external/bash" remote="gh" revision="cm-10.1" />
-  <project name="CodeTh3ory/android_external_bluetooth_bluedroid" path="external/bluetooth/bluedroid" remote="gh" revision="master" />
+  <!-- project name="CodeTh3ory/android_external_bluetooth_bluedroid" path="external/bluetooth/bluedroid" remote="gh" revision="master" / -->
   <project name="android_external_busybox" path="external/busybox" remote="redd" revision="rz-4.2" />
   <project name="UnicornButter/external_chromium" path="external/chromium" remote="gh" revision="jb-mr1" />
   <project name="CodeTh3ory/android_external_clang" path="external/clang" remote="gh" revision="sm-jb-mr1" />
-  <project name="CyanogenMod/android_external_compiler-rt" path="external/compiler-rt" remote="gh" revision="cm-10.1" />
+  <!-- project name="CyanogenMod/android_external_compiler-rt" path="external/compiler-rt" remote="gh" revision="cm-10.1" / -->
   <project name="CarbonDev/external_dnsmasq" path="external/dnsmasq" remote="gh" revision="jb2" />
   <project name="loosethisskin/android_external_e2fsprogs" path="external/e2fsprogs" remote="gh" revision="cm-10.1-linaro" />
   <project name="loosethisskin/android_external_elfutils" path="external/elfutils" remote="gh" revision="cm-10.1-linaro" />
@@ -160,25 +163,26 @@
   <project name="UnicornButter/external_ping" path="external/ping" remote="gh" revision="jb-mr1" />
   <project name="loosethisskin/android_external_ping6" path="external/ping6" remote="gh" revision="cm-10.1-linaro" />
   <project name="CyanogenMod/android_external_powertop" path="external/powertop" remote="gh" revision="cm-10.1" />
-  <project name="CyanogenMod/android_external_qrngd" path="external/qrngd" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_external_qrngd" path="external/qrngd" remote="gh" revision="cm-10.1" />
   <project name="VanirAOSP/platform_external_quake" path="external/quake" remote="gh" revision="linaro_android_4.2.2" />
   <project name="CarbonDev/android_external_skia" path="external/skia" remote="gh" revision="jb2" />
   <project name="UnicornButter/external_stlport" path="external/stlport" remote="gh" revision="jb-mr1" />
   <project name="CyanogenMod/android_external_sqlite" path="external/sqlite" remote="gh" revision="cm-10.1" />
   <project name="loosethisskin/android_external_tcpdump" path="external/tcpdump" remote="gh" revision="cm-10.1-linaro" />
   <project name="UnicornButter/external_v8" path="external/v8" remote="gh" revision="jb-mr1" />
+  <project name="codefirex/external_valgrind" path="external/valgrind" remote="bb" revision="jb-devel" />
   <project name="CyanogenMod/android_external_vim" path="external/vim" remote="gh" revision="cm-10.1" />
-  <project name="VanirAOSP/platform_external_webkit" path="external/webkit" remote="gh" revision="jb42" />
+  <project name="codefirex/external_webkit" path="external/webkit" remote="bb" revision="jb-devel-rebase" />
   <project name="CarbonDev/android_external_wpa_supplicant_8" path="external/wpa_supplicant_8" remote="gh" revision="jb2" />
   <project name="platform/external/x264" path="external/x264" remote="linaro" revision="linaro-master" />
-  <project name="CyanogenMod/android_external_yaffs2" path="external/yaffs2" remote="gh" revision="cm-10.1" />
-  <project name="CyanogenMod/android_external_zlib" path="external/zlib" remote="gh" revision="cm-10.1" />
+  <!-- project name="CyanogenMod/android_external_yaffs2" path="external/yaffs2" remote="gh" revision="cm-10.1" / -->
+  <project name="codefirex/external_zlib" path="external/zlib" remote="bb" revision="jb-devel" />
   <project name="koush/Superuser" path="external/koush/Superuser" remote="gh" revision="master" />
   <project name="koush/Widgets" path="external/koush/Widgets" remote="gh" revision="master" />
  <!-- framework -->
   <project name="android_frameworks_base" path="frameworks/base" remote="redd" revision="tmo-test"/>
   <!-- project name="android_frameworks_native" path="frameworks/native" remote="pax" revision="raum" / -->
-  <project name="android_frameworks_opt_telephony" path="frameworks/opt/telephony" remote="redd" revision="rz-4.2" />
+  <!-- project name="android_frameworks_opt_telephony" path="frameworks/opt/telephony" remote="redd" revision="rz-4.2" / -->
   <!-- project name="VanirAOSP/platform_frameworks_wilhelm" path="frameworks/wilhelm" remote="gh" revision="linaro_android_4.2.2" / -->
 
  <!-- hardware -->
@@ -211,22 +215,22 @@
   <!-- project name="VanirAOSP/platform_libcore" path="libcore" remote="gh" revision="jb42-master" / -->
 
  <!-- packages -->
-  <project name="CyanogenMod/android_packages_apps_Bluetooth" path="packages/apps/Bluetooth" remote="gh" revision="cm-10.1" />
-  <project name="android_packages_apps_Browser" path="packages/apps/Browser" remote="pax" revision="jb-mr1-dev" />
-  <project name="android_packages_apps_camera" path="packages/apps/Camera" remote="redd" revision="rz-4.2" />
+  <!-- project name="CyanogenMod/android_packages_apps_Bluetooth" path="packages/apps/Bluetooth" remote="gh" revision="cm-10.1" / -->
+  <!-- project name="android_packages_apps_Browser" path="packages/apps/Browser" remote="pax" revision="jb-mr1-dev" />
+  <project name="android_packages_apps_camera" path="packages/apps/Camera" remote="redd" revision="rz-4.2" / -->
   <project name="CyanogenMod/android_packages_apps_Calculator" path="packages/apps/Calculator" remote="gh" revision="cm-10.1" />
-  <project name="android_packages_apps_Contacts" path="packages/apps/Contacts" remote="redd" revision="rz-4.2" />
+  <!-- project name="android_packages_apps_Contacts" path="packages/apps/Contacts" remote="redd" revision="rz-4.2" / -->
   <project name="CyanogenMod/android_packages_apps_DeskClock" path="packages/apps/DeskClock" remote="gh" revision="cm-10.1" />
-  <project name="CodeTh3ory/android_packages_apps_DSPManager" path="packages/apps/DSPManager" remote="gh" revision="cm-10.1" />
+  <!-- project name="CodeTh3ory/android_packages_apps_DSPManager" path="packages/apps/DSPManager" remote="gh" revision="cm-10.1" / -->
   <project name="CyanogenMod/android_packages_apps_CMFileManager" path="packages/apps/FileManager" remote="gh" revision="cm-10.1" />
-  <project name="android_packages_apps_Gallery2" path="packages/apps/Gallery2" remote="redd" revision="rz-4.2" />
+  <!-- project name="android_packages_apps_Gallery2" path="packages/apps/Gallery2" remote="redd" revision="rz-4.2" / -->
   <project name="android_packages_apps_Launcher2" path="packages/apps/Launcher2" remote="pax" revision="raum" />
   <project name="android_packages_apps_Mms" path="packages/apps/Mms" remote="redd" revision="rz-4.2" />
   <project name="android_packages_apps_phone" path="packages/apps/Phone" remote="redd" revision="rz-4.2" />
   <!-- project name="CyanogenMod/android_packages_apps_SamsungServiceMode" path="packages/apps/SamsungServiceMode" remote="gh" revision="cm-10.1" / -->
   <project name="android_packages_apps_Settings" path="packages/apps/Settings" remote="redd" revision="rz-4.2-test" />
-  <project name="CyanogenMod/android_packages_apps_Stk" path="packages/apps/Stk" remote="gh" revision="cm-10.1" />
-  <project name="CyanogenMod/android_packages_providers_TelephonyProvider" path="packages/providers/TelephonyProvider" remote="gh" revision="cm-10.1" />
+  <!-- project name="CyanogenMod/android_packages_apps_Stk" path="packages/apps/Stk" remote="gh" revision="cm-10.1" />
+  <project name="CyanogenMod/android_packages_providers_TelephonyProvider" path="packages/providers/TelephonyProvider" remote="gh" revision="cm-10.1" / -->
   <project name="android_packages_apps_rZWallpapers" path="packages/apps/rZWallpapers" remote="pax" revision="master" />
   <project name="android_packages_apps_Torch" path="packages/apps/Torch" remote="pax" revision="raum" />
   <project name="VanirAOSP/packages_apps_SpeakerProximity" path="packages/apps/SpeakerProximity" remote="gh" revision="jb42" />
@@ -246,7 +250,7 @@
   <project name="codefirex/prebuilts_misc" path="prebuilts/misc" remote="bb" revision="jb-devel" />
 
  <!-- system -->
- <project name="CyanogenMod/android_system_bluetooth" path="system/bluetooth" remote="gh" revision="cm-10.1" />
+ <!-- project name="CyanogenMod/android_system_bluetooth" path="system/bluetooth" remote="gh" revision="cm-10.1" / -->
   <project name="android_system_core" path="system/core" remote="redd" revision="rz-4.2" />
   <project name="android_system_extras" path="system/extras" remote="redd" revision="rz-4.2" />
   <project name="android_system_media" path="system/media" remote="pax" revision="master" />
