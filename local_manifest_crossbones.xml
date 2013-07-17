@@ -71,7 +71,7 @@
    <!-- project name="android_hardware_ti_omap4xxx" path="hardware/ti/omap4xxx" remote="pax" revision="master" / -->
 
   <!-- kernel -->
-  <project path="kernel/samsung/tuna" name="anarkia1976/ak-berserk" remote="gh" revision="ak-cylon-4.2.2-experimental10" />
+  <project path="kernel/samsung/tuna" name="anarkia1976/AK-berserk" remote="gh" revision="ak-cylon-4.2.2-experimental10" />
    <!-- project name="imoseyon/leanKernel-galaxy-nexus" path="kernel/samsung/tuna" remote="gh" revision="lk-jb-mr1" / -->
 
   <!-- packages -->
