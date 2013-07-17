@@ -5,9 +5,8 @@
          My local_manifest for building Crossbones ROM
              https://github.com/Crossbones/
          Adds:
-              Theme Engine(CyanogenMod)
               Superuser embeded-Settings(koush)
-              Inline Kernel(imoseyon/LeanKernel)
+              Inline Kernel(anarkia1976/AK-berserk)
                                                     -->
 
   <!-- repos -->
@@ -25,19 +24,19 @@
    <remove-project name="android_device_samsung_maguro" />
    <remove-project name="android_device_samsung_toroplus" />
    <remove-project name="device/ti/panda" groups="device" />
-   <!-- remove-project name="platform/frameworks/av" />
+   <!-- remove-project name="platform/frameworks/av" / -->
    <remove-project name="android_frameworks_base" />
-   <remove-project name="platform/hardware/ti/omap4xxx" />
+   <!-- remove-project name="platform/hardware/ti/omap4xxx" />
    <remove-project name="android_packages_apps_Launcher2" />
    <remove-project name="android_packages_apps_Mms" />
-   <remove-project name="platform/packages/apps/Phone" />
+   <remove-project name="platform/packages/apps/Phone" / -->
    <remove-project name="android_packages_apps_Settings" />
-   <remove-project name="android_system_core" />
+   <!-- remove-project name="android_system_core" />
    <remove-project name="platform/system/extras" />
    <remove-project name="platform/system/security" / -->
    <remove-project name="platform/external/yaffs2" />
    <remove-project name="platform/external/zlib" />
-   <!-- remove-project name="android_vendor_crossbones" / -->
+   <remove-project name="android_vendor_crossbones" />
 
   <!-- build -->
    <project path="build" name="android_build" remote="pax" revision="crossbones">
@@ -45,8 +44,8 @@
    </project>
 
   <!-- device -->
-   <project name="android_device_samsung_toro" path="device/samsung/toro" remote="pax" revision="crossbones" />
-   <project name="android_device_samsung_tuna" path="device/samsung/tuna" remote="pax" revision="crossbones" />
+   <project name="android_device_samsung_toro" path="device/samsung/toro" remote="redd" revision="jb422" />
+   <project name="android_device_samsung_tuna" path="device/samsung/tuna" remote="redd" revision="jb422" />
 
    <!-- external -->
    <project name="CarbonDev/platform_external_armzipalign" path="external/armzipalign" remote="gh" revision="master" />
@@ -54,6 +53,7 @@
    <project name="CyanogenMod/android_external_htop" path="external/htop" remote="gh" revision="cm-10.1" />
    <project name="CyanogenMod/android_external_libncurses" path="external/libncurses" remote="gh" revision="cm-10.1" />
    <project name="CyanogenMod/android_external_lsof" path="external/lsof" remote="gh" revision="cm-10.1" />
+   <project name="CyanogenMod/android_external_lsof" path="external/lzo" remote="gh" revision="cm-10.1" />
    <project name="CyanogenMod/android_external_nano" path="external/nano" remote="gh" revision="cm-10.1" />
    <project name="CyanogenMod/android_external_openvpn" path="external/openvpn" remote="gh" revision="cm-10.1" />
    <project name="CyanogenMod/android_external_powertop" path="external/powertop" remote="gh" revision="cm-10.1" />
@@ -65,7 +65,7 @@
 
    <!-- frameworks -->
    <!-- project name="android_frameworks_av" path="frameworks/av" remote="pax" revision="master" / -->
-   <!-- project name="android_frameworks_base-cb" path="frameworks/base" remote="pax" revision="jellybean-4.2-tmo" / -->
+   <project name="android_frameworks_base-cb" path="frameworks/base" remote="pax" revision="quiet-hours" />
 
   <!-- hardware -->
    <!-- project name="android_hardware_ti_omap4xxx" path="hardware/ti/omap4xxx" remote="pax" revision="master" / -->
@@ -75,11 +75,13 @@
    <!-- project name="imoseyon/leanKernel-galaxy-nexus" path="kernel/samsung/tuna" remote="gh" revision="lk-jb-mr1" / -->
 
   <!-- packages -->
-   <!-- project name="android_packages_apps_Mms" path="packages/apps/Mms" remote="pax" revision="jellybean-4.2-tmo" / -->
-   <!-- project name="android_packages_apps_Phone" path="packages/apps/Phone" remote="pax" revision="cb" / -->
-   <!-- project name="android_packages_apps_Launcher2" path="packages/apps/rZLauncher" remote="pax" revision="cb" / -->
-   <!-- project name="android_packages_apps_rZWallpapers" path="packages/apps/rZWallpapers" remote="pax" revision="master" / -->
-   <!-- project name="android_packages_apps_Settings-cb" path="packages/apps/Settings" remote="pax" revision="jb-4.2-tmo-su-test" / -->
+   <!-- project name="android_packages_apps_Mms" path="packages/apps/Mms" remote="pax" revision="jellybean-4.2-tmo" />
+   <project name="android_packages_apps_Phone" path="packages/apps/Phone" remote="pax" revision="cb" />
+   <project name="android_packages_apps_Launcher2" path="packages/apps/rZLauncher" remote="pax" revision="cb" />
+   <project name="android_packages_apps_rZWallpapers" path="packages/apps/rZWallpapers" remote="pax" revision="master" / -->
+   <project name="CyanogenMod/android_packages_apps_CMFileManager" path="packages/apps/CMFileManager" remote="gh" revision="cm-10.1" />
+   <project name="android_packages_apps_Settings-cb" path="packages/apps/Settings" remote="pax" revision="quiet-hours" />
+   <project name="CyanogenMod/android_packages_apps_Trebuchet" path="packages/apps/Trebuchet" remote="gh" revision="cm-10.1" />
 
   <!-- prebuilts -->
    <project name="prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.7" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" remote="xap" revision="jb-devel" />
@@ -88,10 +90,11 @@
    <project name="prebuilts_gcc_linux-x86_arm_arm-eabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" remote="xap" revision="jb-devel" />
 
   <!-- system -->
-   <!-- project name="android_system_core-cb" path="system/core" remote="pax" revision="jellybean-4.2-tmo" / -->
-   <!-- project name="android_system_extras" path="system/extras" remote="pax" revision="crossbones" / -->
+   <project name="android_system_core-cb" path="system/core" remote="pax" revision="jellybean-4.2-no-su" />
+   <project name="android_system_extras" path="system/extras" remote="pax" revision="jellybean-4.2" />
    <!-- project name="android_system_security" path="system/security" remote="pax" revision="master" / -->
 
     <!-- vendor -->
-  <!-- project name="android_vendor_pax" path="vendor/crossbones" remote="pax" revision="crossbones" / -->
+    <project name="android_vendor_pax" path="vendor/crossbones" remote="pax" revision="crossbones" />
+
   </manifest>
