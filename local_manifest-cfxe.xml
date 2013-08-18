@@ -42,6 +42,8 @@
   <!-- project name="CyanogenMod/android_packages_apps_Trebuchet" path="packages/apps/Trebuchet" remote="github" revision="cm-10.2" / -->
 
   <!-- vendor -->
+  <project name="android_vendor_ThyrusHoloBlack" path="vendor/ThyrusHoloBlack" remote="pax" revision="master" />
+  <project name="vendor_google" path="vendor/google" remote="redd" revision="gapps-4.3" />
   <project name="android_vendor_raumzero" path="vendor/cfx" remote="redd" revision="cfx-vendor-mod" />
 
 </manifest>
