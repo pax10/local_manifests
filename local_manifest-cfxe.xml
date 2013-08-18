@@ -10,6 +10,8 @@
 
  <!-- remove repos -->
  <remove-project name="build" />
+ <remove-project name="device_samsung_toro" />
+ <remove-project name="device_samsung_tuna" />
  <remove-project name="packages_apps_mms" />
  <remove-project name="packages_apps_settings" />
  <remove-project name="vendor_cfx" />
@@ -23,6 +25,10 @@
   <project name="buildscripts" path="buildscripts" remote="pax" revision="bs" >
     <copyfile src="build_cfx.sh" dest="buildcfx" />
   </project>
+
+  <!-- device -->
+  <project name="android_device_samsung_toro" path="device/samsung/toro" remote="redd" revision="cfx-toro-mod" />
+  <project name="android_device_samsung_tuna" path="device/samsung/tuna" remote="redd" revision="cfx-tuna-mod" />
 
   <!-- eternal -->
   <project name="CyanogenMod/android_external_bash" path="external/bash" remote="github" revision="cm-10.2" />
