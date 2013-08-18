@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <!-- local_manifest for cfxe -->
+
+ <!-- repos -->
+ <!-- remote name="gh" fetch="https://github.com/" / -->
+ <remote name="redd" fetch="https://github.com/MikereDD/" />
+ <remote name="pax" fetch="https://github.com/pax10/" />
+
+ <!-- remove repos -->
+ <remove-project name="build" />
+ <remove-project name="packages_apps_mms" />
+ <remove-project name="packages_apps_settings" />
+ <remove-project name="vendor_cfx" />
+
+ <!-- add repos -->
+   <project path="build" name="android_build" remote="redd" revision="cfx-build-mod">
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+
+ <!-- build scripts -->
+  <project name="buildscripts" path="buildscripts" remote="pax" revision="bs" >
+    <copyfile src="build_cfx.sh" dest="buildcfx" />
+  </project>
+
+  <!-- eternal -->
+  <project name="CyanogenMod/android_external_bash" path="external/bash" remote="github" revision="cm-10.2" />
+  <project name="CyanogenMod/android_external_htop" path="external/htop" remote="github" revision="cm-10.2" />
+  <project name="CyanogenMod/android_external_libncurses" path="external/libncurses" remote="github" revision="cm-10.2" />
+  <project name="CyanogenMod/android_external_lzo" path="external/lzo" remote="github" revision="cm-10.2" />
+  <project name="CyanogenMod/android_external_nano" path="extrenal/nano" remote="github" revision="cm-10.2" />
+  <project name="CyanogenMod/android_external_powertop" path="external/powertop" remote="github"  revision="cm-10.2" />
+  <project name="CyanogenMod/android_external_vim" path="external/vim" remote="github" revision="cm-10.2" />
+
+  <!-- frameworks -->
+
+  <!-- packages -->
+  <project name="CyanogenMod/android_packages_apps_DSPManager" path="packages/apps/DSPManager" remote="github" revision="cm-10.2" />
+  <project name="android_packages_apps_Mms" path="packages/apps/Mms" remote="redd" revision="cfx-mms-mod" />
+  <project name="android_packages_apps_Settings" path="packages/apps/Settings" remote="redd" revision="cfx-settings-mod" />
+  <!-- project name="CyanogenMod/android_packages_apps_Trebuchet" path="packages/apps/Trebuchet" remote="github" revision="cm-10.2" / -->
+
+  <!-- vendor -->
+  <project name="android_vendor_raumzero" path="vendor/cfx" remote="redd" revision="cfx-vendor-mod" />
+
+</manifest>
